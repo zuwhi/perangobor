@@ -1,0 +1,1256 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+  scroll-behavior: smooth;}
+
+body{
+    overflow-x: hidden;
+ 
+}
+
+nav{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  z-index: 999;
+  position: absolute;
+  height: 80px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+}
+nav ul li{
+  list-style-type: none;
+  display: inline-block;
+  padding: 0 20px;
+  
+}
+nav ul li a{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  position: relative;
+  font-size: 2vw;
+  
+
+}
+nav ul li a:hover{
+  color: #ffff;
+  text-shadow: 0 0 2px #ffff;
+}
+
+nav ul li a::after{
+  content: "";
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.536);
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 1s;
+}
+nav ul li a:hover::after{
+  width: 100%;
+
+}
+
+/* ::-webkit-scrollbar{
+  display: none;
+} */
+
+.banner{
+  background-color: rgb(0, 0, 0);
+   height: 300vh;
+    position: relative;
+    transition: 2s ease;
+background-size: cover;
+animation: fade 2s;
+overflow: hidden;
+
+    
+}
+@keyframes fade {
+  0%{background-color: rgb(217, 60, 7);
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }}
+  
+
+.bg-1{
+  background-color: 0;
+  height: 200vh;
+  width: 100%;
+  position: absolute;
+  }
+  
+.percik{
+  background-color: rgba(23, 232, 33, 0);
+  height: 200vh;
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+  }
+  .percik.muncul{
+    transition: 1s;
+    opacity: 1;
+  }
+.gelap{
+  background-color: rgba(0, 0, 0, 0.434);
+  height: 200vh;
+  width: 100%;
+  position: absolute;
+  }
+.gradient{
+  height: 300vh;
+  width: 100%;
+  position: absolute;
+  background: rgb(0,0,0);
+  background: linear-gradient(0deg, rgba(0,0,0,1) 29%, rgba(138,46,38,0) 72%);}
+.blok1{
+  background-color: rgba(0, 0, 0, 0);
+  height: 300vh;
+  width: 100%;
+  position: absolute;
+  }
+
+.banner img{
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  position: fixed;
+}
+
+
+.banner .judul{
+  opacity: 0;
+  
+  
+}
+
+.banner .judul.munculJudul {
+
+  opacity: 1;
+  transition: 2s;
+
+}
+.banner .judul.munculJudul img{
+  position: absolute;
+  animation: judulTampil 3s;
+  opacity: 1;
+
+}
+
+
+.float{
+  animation: float1 15s linear infinite;
+  animation-direction: alternate-reverse;
+
+}
+
+.banner .judul-2{
+  opacity: 0;
+  
+}
+.banner .judul-2.ada{
+  opacity: 1;
+  transition: 2s;
+}
+.judul-2 img{
+  position: absolute;
+  animation: float 5s linear infinite;
+  animation-direction: alternate-reverse;
+}
+
+
+.pakhaji {
+  transition: 2s ;
+  position: relative;
+
+}
+.peternak {
+
+  transition: 2s;
+  
+}
+
+.side{
+  z-index: 99;
+  position: fixed;
+  width: 3%;
+  height: 100vh;
+}
+
+.sosmed{
+  height: 100px;
+  margin-top: 450px;
+  display: flex;
+  justify-content: center;
+
+}
+.sosmed ul li{
+  position: relative;
+  left: -15px;
+  padding: 20px;
+  list-style: none;
+}
+.sosmed ul li a{
+  text-decoration: none;color: #ffffff;
+}
+.sosmed ul li a img{
+  width: 28px;
+  height: 28px;
+  transition: 0.3s;
+}
+.sosmed ul li a img:hover{
+  width: 35px;
+  height: 35px;
+  transition: 0.3s;
+}
+.follow{
+  height: 80px;
+ padding-top:120px;
+}
+.follow span{
+  font-family: 'brush';
+  font-size: 20px;
+  color: azure;
+  rotate: -90deg;
+  display: flex;
+  white-space: nowrap;
+}
+
+.sidebar{
+
+  z-index: 99;
+  position: fixed;
+  top: 0;
+ right: 0;
+  height: 100vh;
+  width: 50px;
+  opacity: 1;
+  transition: 2s;
+}
+
+.sidebar.muncul{
+  opacity: 1;
+  transition: 4s;
+}
+
+.sidebar a{
+  position: relative;
+  top: 180px;
+  font-family:  'brush2';
+  text-decoration: 0;
+  color: black;
+  font-size: 30px;
+}
+.sidebar a p{
+  line-height: 55px;
+  right: -28px;
+  position: relative;
+  
+}
+.sidebar a:hover{
+  color: rgb(254, 254, 255);
+
+}
+.sidebar img{
+  opacity: 0.7;
+  top: 120px;
+  width: 45px;
+  height: 380px;
+  right: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.tombol{
+  background-color: rgba(58, 58, 58, 0);
+  z-index: 99;
+  position: fixed;
+  height: 6vh;
+  width: 18%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  bottom: 0;
+  color: rgb(255, 255, 255);
+}
+.tombol .musik{
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+  
+}
+  .tombol .musik img{
+    height: 30px;
+    width: 30px;
+    object-fit: contain;
+  }
+  .tombol .musik button{
+    height: 50px;
+    width: 50px;
+    background: url(/assets/img/centang.png) no-repeat;
+    border: none;
+   position: relative;
+   bottom: 25px;
+   right: 15px;
+   opacity: 1;
+  }
+.tombol  span{
+  font-size: 20px;
+  padding-right: 15px;
+  font-family: 'brush';
+  white-space: nowrap;
+}
+
+.panah-scroll{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  opacity: 0;
+  
+}
+.panah-scroll.muncul{
+  transition: 5s;
+  opacity: 1;
+}
+
+.panah{
+  border: solid white;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 12px;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+}
+.panah:nth-child(2){
+  animation: panah1 2s ease-in-out infinite;
+}
+.panah:nth-child(3){
+  animation: panah2 2s ease-in-out infinite;
+}
+
+@keyframes panah1 {
+  100%{
+    opacity: 0.5;
+    bottom: 35px;
+  }}
+@keyframes panah2 {
+  100%{
+    opacity: 0.3;
+    bottom: 15px;
+  }}
+
+@keyframes fade {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }}
+
+.page2{
+  background-color: rgba(250, 235, 215, 0);
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  opacity: 1;
+  transition: 2s;
+  z-index: 98;
+}
+
+.page2 .story {
+  display: flex;
+}
+.page2 .story .f{
+  flex: 3;
+}
+.page2 .story .g{
+  flex: 2;
+}
+.page2 .story .a{
+  position: relative;
+  top: 50px;
+  transition: 2s;
+  opacity: 0;
+  color: white;
+  flex: 6;
+}
+.story .a.muncul{
+  top: 0;
+  opacity: 1;
+  transition: 4s;
+}
+.page2 .story h2{
+  font-size: 4vw;
+  padding-bottom: 1vw;
+}
+.page2 .story h1{
+  font-size: 7vw;
+  margin: -2vw 0;
+}
+.page2 .story p{
+  font-size: 2vw;
+}
+.page2 .story .b{
+  position: relative;
+  transform: translateX(50px);
+  opacity: 0;
+  transition: 0.5s;
+  color: rgb(252, 252, 252);
+  padding: 0 50px;
+  flex: 9;
+}
+.story .b.muncul{
+  transform: translateX(0px) ;
+  opacity: 1;
+  transition: 4s;
+}
+
+.page2 .pic2 img{
+  position: relative;
+  max-height: 100vh;
+ max-width: 100%;
+  object-fit: cover;
+}
+.page2 .pic2{
+  opacity: 0;
+  transition: 1s;
+}
+.page2 .pic2.muncul{
+  opacity: 1;
+  transition: 5s;
+}
+
+.page2.muncul {
+  opacity: 1;
+  transition: 4s;
+}
+
+.page2 .story-2{
+  position: relative;
+  display: flex;
+  height: 20vh;
+  opacity: 0;
+}
+.page2 .story-2.muncul{
+  transition: 3s;
+  opacity: 1;
+}
+.page2 .story-2 .a{
+  flex: 2;
+}
+.page2 .story-2 .b{
+  flex: 12;
+}
+.page2 .story-2 .b p{
+  margin-left: 8px;
+  max-width: 700px;
+font-size: 2vw;
+color: white;
+}
+/* /////// END LANDING PAGE \\\\\\ */
+
+.trans1{
+  position:relative;
+  z-index: 91;
+  bottom:  60px;
+  overflow: hidden;
+}
+.trans1 img{
+  position: relative;
+  width: 100%;
+   object-fit: cover;
+}
+
+
+
+/* ////////KONTEN1/////////// */
+.latar{
+  background-color: #8a2e26;
+  width: auto;
+  height: max-content;
+  transition: 3s;
+}
+
+.konten{
+  transition: 2s;
+  animation: fade2 1s;
+  height: 70vh;
+  width: 100%;
+
+
+
+}
+.intro{
+  position: relative;
+top: 10%;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transition: 1s;
+  transform: translateY(-3vw);
+  
+}
+.intro.muncul{
+  opacity: 1;
+  transition: 3s;
+  transform: translateY(0);
+}
+.intro .text{
+  width: 100%;
+  color: white;
+  position: relative;
+ 
+  
+  
+}
+.intro .text h2{
+  position: relative;
+  top: -230px;
+  display: flex;
+  justify-content: center;
+  font-size: 5vw;
+  color: #f2f2f2b1;
+  font-family:  'brush';
+ 
+}
+.intro .text h1{
+  font-family: 'edo';
+  color: #8a2e26;
+  line-height: 180px;
+  font-size: 10vw;
+  text-shadow: -1px 1px 0 hsl(0, 0%, 0%),
+  1px 1px 0 #000,
+ 1px -1px 0 #000,
+-1px -1px 0 #000;
+  /* text-shadow: 0 0 2px #ffffff; */
+}
+
+/* @keyframes texted {
+  0%{
+    text-shadow: 0 0 2px #ffff;
+  }
+  100%{
+    text-shadow: 0 0 10px #c82727;
+  }
+} */
+.intro .text .a{
+  opacity: 1;
+}
+
+.intro .text .b h1{
+  position: relative;
+ display: flex;
+ justify-content: end;
+}
+
+
+.pembuka{
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+.konten1{
+  height: 110vh;
+  display: flex;
+  width: 100%;
+  opacity: 0;
+  transition: 1s;
+  transform: translateY(3vw);
+}
+.konten1.muncul{
+  opacity: 1;
+  transition: 3s;
+  transform: translateY(0);
+}
+.cerita{
+  left: 5%;
+  z-index: 96;
+  position: absolute;
+  width: 25%;
+  color: white;
+}
+.cerita h1{
+  font-size: 4.5vw;
+}
+.cerita h2{
+  font-size: 3.5vw;
+}
+.cerita p{
+  font-size: 2vw;
+  color: white;
+}
+.wadahternak{
+  z-index: 95;
+  left: 10%;
+  height: 110vh;
+  width: 100%;
+  position: relative;
+  
+  overflow: hidden;
+}
+
+
+.ternak{
+  height: auto;
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: 2s;
+}
+.ternak.muncul{
+  transition: 2s;
+  opacity: 1;
+}
+#ternak5{
+ padding-left: 50px;
+}
+
+
+/* ////////////////////konten2\\\\\\\\\\\\\\\\\\\\\\*/
+.teks p{
+  color: white;
+  font-size: 2vw;
+}
+.konten2{
+ 
+  height: 65vh;
+  display: flex;
+  width: 100%;}
+
+#peternak2{
+  flex:3;
+  height: 100vh;
+  max-width: 100%;
+  object-fit: contain;
+  /* transform: translateY(30px) scale(0.8); */
+  opacity: 0;
+  transition: 2s;
+  position: relative;
+  bottom: 22%;
+  left: 4%;
+  transform: translateY(10px)  scale(0.9);
+}
+.konten2 #peternak2.muncul{
+  opacity: 1;
+  transition: 2s;
+  transform: translateY(0px)  scale(1);
+
+}
+
+.konten2 .b{
+  padding-top: 50px;
+  position: relative;
+  right: 80px;
+  flex: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  bottom: 5%;
+}
+
+.konten2 .b p{
+  max-width: 85%;
+  font-size: 2vw;
+  color: white;
+}
+
+.konten3{
+ 
+  height: 65vh;
+  width: 100%;
+  opacity: 0;
+  transition: 3s;
+}
+.konten3.muncul{
+  opacity: 1;
+  transition: 3s;
+}
+.konten3 .text{
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 15%;
+}
+.konten3 .text p{
+  font-size: 2vw;
+  max-width: 50%;
+  color: white;
+  text-align: center;
+}
+.konten3 .salim {
+  position: relative;
+  left: 15%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.konten3 .salim img{
+  object-fit: cover;
+  max-height: 40vh;
+  max-width: 100%;
+  transition: 1s;
+}
+.konten3 .salim img:hover{
+  max-height: 45vh;
+  max-width: 100%;
+  transition: 0.5s;
+}
+.konten4{
+ 
+  height: 55vh;
+  width: 100%;
+}
+
+.konten4 .a {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.salam{
+  height: 50vh;
+  position: relative;
+  left: 3%;
+  flex: 2;
+  opacity: 0;
+  transition: 2s;
+}
+
+.salam.muncul{
+  opacity: 1;
+  transition: 3s;
+}
+.konten4 .a .teks{
+  position: relative;
+  right: 3%;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  opacity: 0;
+  transition: 2s;
+}
+.a .teks.muncul{
+  opacity: 1;
+  transition: 7s;
+}
+.a .teks.muncul:hover{
+ font-size: 3vw;
+ transition: 2s;
+}
+.konten4 .a .teks p{
+  color: white;
+}
+.salam {
+  background: url(/assets/img/salam1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: salaman 2.5s infinite ;
+ animation-timing-function: ease-out;
+}
+
+
+.konten5{
+ 
+  display: flex;
+  height: 120vh;
+  width: 100%;
+}
+.konten5 .mancing{
+  position: relative;
+  flex: 6;
+  opacity: 0;
+  transition: 2s;
+}
+.konten5 .mancing.muncul{
+  opacity: 1;
+  transition: 2s;
+  transform: scale(1.1) translateX(5vw);
+}
+.konten5 .teks{
+  position: relative;
+  display: flex;
+ align-items: center;
+  flex: 2;
+  right: 4%;
+  opacity: 1;
+  transition: 2s;
+  
+}
+
+.konten5 .teks.muncul{
+  opacity: 1;
+  transition: 2s;
+}
+
+.konten5 .mancing img{
+ object-fit: cover;
+ max-height: 110vh;
+  max-width: 100%;
+ 
+}
+.konten5 .a, .b{
+  flex: 1;
+}
+
+.konten6{
+ 
+  height: 100vh;
+  display: flex;
+  width: 100%;
+  transition: 1s;
+}
+.konten6.hilang{
+  opacity: 0;
+  transition: 1s;
+}
+.konten6 .teks{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+.konten6 .teks p{
+  position: relative;
+  left: 5%;
+  max-width: 65%;
+}
+.konten6 .ikan{
+  background-color: #1e1e1d00;
+  flex: 1;
+ 
+}
+.iwak{
+  opacity: 0;
+  transition: 1s;
+}
+.iwak.muncul{
+  opacity: 1;
+  transition: 2s;
+}
+.konten6 .ikan img{
+  position: absolute;
+  object-fit: cover;
+  max-height: 100vh;
+  max-width: 100%;
+}
+
+.konten7{
+ 
+  height: 80vh;
+  display: flex;
+  width: 100%;
+}
+.konten7 .teks{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.konten7 .teks p{
+  font-size: 2vw;
+  position: relative;
+  max-width: 60%;
+}
+.konten7 .bakar{
+  flex: 1;
+  position: relative;
+  left: 10%;
+  opacity: 0;
+  transition: 2s;
+}
+.konten7 .bakar.muncul{
+  opacity: 1;
+  transition: 3s;
+}
+.konten7 .bakar img{
+  position: absolute;
+  object-fit: cover;
+  max-height: 80vh;
+  max-width: 100%;
+}
+
+.konten8{
+ 
+  height: 100vh;
+  width: 100%;
+  opacity: 0;
+  transition: 2s;
+}
+.konten8.muncul{
+  opacity: 1;
+  transition: 3s;
+}
+.konten8 .teks{
+  height: 30vh;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.konten8 .teks p{
+  position: relative;
+  max-width: 40%;
+  right: 5%;
+  font-size: 2vw;
+}
+.konten8 .sapi{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+ 
+}
+.konten8 .sapi img{
+  object-fit: cover;
+
+  max-height: 70vh;
+  max-width: 100%;
+}
+
+
+/* ///////////////////////////////////////////////////////////////////////// */
+
+
+
+
+
+
+
+
+
+  @font-face {
+    font-family: edo;
+    src: url(/assets/font/edosz.ttf);
+  }
+  @font-face {
+    font-family: heycomic;
+    src: url(/assets/font/heycomic.ttf);
+  }
+  @font-face {
+    font-family: brush;
+    src: url(/assets/font/TitleBrushXL.ttf);
+  }
+  @font-face {
+    font-family: kuas;
+    src: url(/assets/font/kuas.ttf);
+  }
+  @font-face {
+    font-family: brush2;
+    src: url(/assets/font/brush2.ttf);
+  }
+
+  @keyframes float {
+    0%{
+      opacity: 0.8;
+      transform: translateY(8px) translateX(-8px) rotate(0) ;
+  
+    }
+    
+    100%{opacity: 1;
+      transform: translateY(-8px) translateX(-8px) rotate(5deg) ;
+    }
+    
+  }
+  @keyframes float1 {
+    0%{
+      transform: translateY(-8px) translateX(-5px) rotate(0) ;
+    }
+    
+    100%{
+      transform: translateY(8px) translateX(5px) rotate(8deg) ;
+    }
+    
+  }
+  
+  @keyframes float3 {
+    0%{
+      transform: translateY(-50px) translateX(-50px)  ;
+    }
+    
+    100%{
+      transform: translateY(50px) translateX(50px)  ;
+    }
+    
+  }
+  @keyframes apung {
+    0%{
+      transform: translateX(0)  ;
+    }
+    50%{
+      transform:  translateX(80px)  ;
+    }
+    
+    100%{
+      transform:  translateX(-10px)  ;
+    }
+    
+  }
+  
+  @keyframes judulTampil {
+    0%{
+      transform: scale(3) rotate(25deg) ;
+    }
+    100%{
+      transform: scale(1) rotate(0);
+  
+    }
+    
+  }
+  
+  @keyframes slideKiri {
+      0%{
+          transform: translateX(-200px);
+        }
+        100%{
+          transform: translateX(-5px);
+          
+        }
+  }
+  @keyframes slideKanan {
+      0%{
+          transform: translateX(200px);
+        }
+        100%{
+          transform: translateX(-5px);
+          
+        }
+  }
+  
+.asap1,.asap2,.asap3,.asap{
+  object-fit: cover;
+  max-height: 26vh;
+  max-width: 100%;
+}
+.asap4{
+  height: 21vh;
+}
+  .asap{
+    animation: asap 20s linear infinite;
+    animation-direction: normal;
+  }
+  @keyframes asap {
+    0%{
+      transform: translateX(-5px);
+    }
+    100%{
+      transform: translateX(-1510px);
+      
+    }
+    
+  }
+  .asap1{
+    animation: asap1 20s linear infinite;
+    animation-direction: normal;
+  }
+  @keyframes asap1 {
+    0%{
+      transform: translateX(1510px);
+    }
+    100%{
+      
+      transform: translateX(-5px);
+      
+    }
+    
+  }
+  .asap3{
+    animation: asap3 15s linear infinite;
+    animation-direction: reverse;
+  }
+  @keyframes asap3 {
+    0%{
+      transform: translateX(-6px);
+    }
+    100%{
+      transform: translateX(-1510px);
+      
+    }
+    
+  }
+  .asap2{
+   
+    animation: asap2 15s linear infinite;
+    animation-direction: reverse;
+  }
+  @keyframes asap2 {
+    0%{
+      transform: translateX(1510px);
+    }
+    100%{
+      
+      transform: translateX(-10px);
+      
+    }
+    
+  }
+  
+  @keyframes fade2 {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }}
+    @keyframes salaman {
+      0%{
+        background: url(/assets/img/salam1.png) ;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      25%{
+        background: url(/assets/img/salam2.png);
+        background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      }
+      50%{
+        background: url(/assets/img/salam3.png);
+        background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      }
+      75%{
+        background: url(/assets/img/salam4.png);
+        background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      }
+      100%{
+        background: url(/assets/img/salam1.png);
+        background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      }
+    }
+    
+
+
+
+
+
+
+
+
+    
+.bubble{
+  position: relative;
+  display: flex;
+  transform: rotate(20deg);
+  
+}
+
+
+.bubble span{
+ 
+  opacity: 0.5;
+  position: relative;
+  width: 10px;
+  height: 10px;
+  background: #ff0909;
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 50px 10px rgb(221, 116, 17),
+  0 0 10px #ffffff,
+  0 0 50px #ffffff;
+  animation: animate 15s linear infinite;
+  animation-timing-function: calc(1s/var(--i));
+  animation-duration: calc(80s/var(--i));
+
+
+}
+.bubble span:nth-child(even){
+  background: rgb(250, 3, 3);
+  box-shadow: 0 0 50px 10px rgb(207, 97, 13),
+  0 0 50px rgb(108, 9, 9),
+  0 0 100px rgb(56, 3, 3);
+}
+
+.bubble2{
+  position: relative;
+  display: flex;
+  transform: rotate(30deg);
+  
+}
+.bubble2 span{
+ 
+  opacity: 1;
+  position: relative;
+  width: 10px;
+  height: 10px;
+  background: #ff0909;
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 50px 10px rgb(221, 102, 17),
+  0 0 10px #ffffff,
+  0 0 50px #ffffff;
+  animation: animate 15s linear infinite;
+  animation-duration: calc(80s/var(--i));
+
+}
+.bubble2 span:nth-child(even){
+  background: rgba(235, 7, 7, 0);
+  box-shadow: 0 0 50px 10px rgb(138, 62, 3),
+  0 0 50px rgb(240, 63, 63),
+  0 0 100px rgb(240, 113, 63);
+}
+.bubble3{
+  position: relative;
+  display: flex;
+  transform: rotate(50deg);
+  
+}
+.bubble3 span{
+ 
+  opacity: 0.6;
+  position: relative;
+  width: 10px;
+  height: 10px;
+  background: #ee5509;
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 50px 10px rgb(203, 149, 24),
+  0 0 10px #d87708,
+  0 0 50px #c50707;
+  animation: animate 15s linear infinite;
+  animation-duration: calc(70s/var(--i));
+
+}
+.bubble3 span:nth-child(even){
+  background: rgb(255, 0, 0);
+  box-shadow: 0 0 50px 10px rgb(244, 118, 22),
+  0 0 50px rgb(240, 87, 63),
+  0 0 100px rgb(240, 163, 63);
+}
+
+@keyframes animate {
+  0%{
+      transform: translateY(160vh) translateX(0px) scale(0);
+      
+  }
+  100%{
+      transform: translateY(-50vh) translateX(200px) scale(1);
+      
+  }
+  
+}

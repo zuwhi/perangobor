@@ -40,11 +40,11 @@ body{
 }
 @font-face {
     font-family: kuas;
-    src: url(assets/font/kuas.ttf);
+    src: url(../font/kuas.ttf);
   }
   @font-face {
     font-family: brush2;
-    src: url(assets/font/brush2.ttf);
+    src: url(../font/brush2.ttf);
   }
 
 .latarBelakang h1{

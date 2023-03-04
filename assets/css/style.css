@@ -1,6 +1,6 @@
 @font-face {
     font-family: brush;
-    src: url(/assets/font/TitleBrushXL.ttf);
+    src: url(assets/font/TitleBrushXL.ttf);
   }
 body{
     margin: 0;
@@ -9,7 +9,7 @@ body{
 .latarBelakang {
     height: 100vh;
     width: 100%;
-    /* background-image: url(/assets/img/opening.jpg);
+    /* background-image: url(assets/img/opening.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; */
@@ -40,11 +40,11 @@ body{
 }
 @font-face {
     font-family: kuas;
-    src: url(/assets/font/kuas.ttf);
+    src: url(assets/font/kuas.ttf);
   }
   @font-face {
     font-family: brush2;
-    src: url(/assets/font/brush2.ttf);
+    src: url(assets/font/brush2.ttf);
   }
 
 .latarBelakang h1{

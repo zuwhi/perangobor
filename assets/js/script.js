@@ -37,7 +37,7 @@
 
 
 // ==================HALAMAN MAIN PAGE=================
-var audio = new Audio('/assets/sound/cut.mp3');
+var audio = new Audio('assets/sound/cut.mp3');
 
 var autoScrollDelay = 1
 var autoScrollSpeed = 2

@@ -297,7 +297,7 @@ overflow: hidden;
   .tombol .musik button{
     height: 50px;
     width: 50px;
-    background: url(/assets/img/centang.png) no-repeat;
+    background: url(../img/centang.png) no-repeat;
     border: none;
    position: relative;
    bottom: 25px;
@@ -761,7 +761,7 @@ top: 10%;
   color: white;
 }
 .salam {
-  background: url(/assets/img/salam1.png);
+  background: url(../img/salam1.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -939,24 +939,24 @@ top: 10%;
 
 
   @font-face {
-    font-family: edo;
-    src: url(/assets/font/edosz.ttf);
+    font-family: 'edo';
+    src: url(../font/edosz.ttf);
   }
   @font-face {
-    font-family: heycomic;
-    src: url(/assets/font/heycomic.ttf);
+    font-family: 'heycomic';
+    src: url(../font/heycomic.ttf);
   }
   @font-face {
-    font-family: brush;
-    src: url(/assets/font/TitleBrushXL.ttf);
+    font-family: 'brush';
+    src: url(../font/TitleBrushXL.ttf);
   }
   @font-face {
-    font-family: kuas;
-    src: url(/assets/font/kuas.ttf);
+    font-family: 'kuas';
+    src: url(../font/kuas.ttf);
   }
   @font-face {
-    font-family: brush2;
-    src: url(/assets/font/brush2.ttf);
+    font-family: 'brush2';
+    src: url(../font/brush2.ttf);
   }
 
   @keyframes float {
@@ -1113,31 +1113,31 @@ top: 10%;
     }}
     @keyframes salaman {
       0%{
-        background: url(/assets/img/salam1.png) ;
+        background: url(../img/salam1.png) ;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
       }
       25%{
-        background: url(/assets/img/salam2.png);
+        background: url(../img/salam2.png);
         background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
       }
       50%{
-        background: url(/assets/img/salam3.png);
+        background: url(../img/salam3.png);
         background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
       }
       75%{
-        background: url(/assets/img/salam4.png);
+        background: url(../img/salam4.png);
         background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
       }
       100%{
-        background: url(/assets/img/salam1.png);
+        background: url(../img/salam1.png);
         background-size: contain;
       background-repeat: no-repeat;
       background-position: center;

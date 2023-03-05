@@ -2,8 +2,14 @@
     margin: 0;
     padding: 0;
 }
+/* ::-webkit-scrollbar{
+  display: none;
+} */
+
+
 
 html{
+
   scroll-behavior: smooth;}
 
 body{
@@ -55,9 +61,6 @@ nav ul li a:hover::after{
 
 }
 
-/* ::-webkit-scrollbar{
-  display: none;
-} */
 
 .banner{
   background-color: rgb(0, 0, 0);
@@ -67,8 +70,7 @@ nav ul li a:hover::after{
 background-size: cover;
 animation: fade 2s;
 overflow: hidden;
-
-    
+  
 }
 @keyframes fade {
   0%{background-color: rgb(217, 60, 7);
@@ -86,6 +88,30 @@ overflow: hidden;
   position: absolute;
   }
   
+
+
+.api1,.api2,.api3,.api4{
+  animation: api 5s;
+}
+  @keyframes api {
+    0%{
+      transform: translateY(20vh) ;
+    }
+    100%{
+      transform: translateY(0) ;
+    
+    }}
+
+  @keyframes keluk {
+    0%{
+      opacity: 0 ;
+    }
+    100%{
+      opacity: 1;
+    
+    }}
+
+
 .percik{
   background-color: rgba(23, 232, 33, 0);
   height: 200vh;
@@ -98,23 +124,27 @@ overflow: hidden;
     opacity: 1;
   }
 .gelap{
-  background-color: rgba(0, 0, 0, 0.434);
+  background-color: rgba(0, 0, 0, 0.64);
   height: 200vh;
   width: 100%;
   position: absolute;
   }
 .gradient{
-  height: 300vh;
+  height: 320vh;
   width: 100%;
   position: absolute;
   background: rgb(0,0,0);
-  background: linear-gradient(0deg, rgba(0,0,0,1) 29%, rgba(138,46,38,0) 72%);}
-.blok1{
+  background: rgb(138,46,38);
+  background: rgb(138,46,38);
+  background: linear-gradient(0deg, rgba(138,46,38,1) 1%, rgba(0,0,0,1) 1%, rgba(138,46,38,0) 67%);}
+
+  .blok1{
   background-color: rgba(0, 0, 0, 0);
   height: 300vh;
   width: 100%;
   position: absolute;
   }
+
 
 .banner img{
   height: 100vh;
@@ -123,14 +153,132 @@ overflow: hidden;
   position: fixed;
 }
 
+.title{
+  
+  position: relative;
+  z-index: 95;
+  height: 100vh;
+  max-width: 100%;
+}
+.title .budaya{
+  cursor: default;
+  height: 40vh;
+  width: 100%;
+  align-items: end;
+  justify-content: center;
+  display: flex;
+}
+.title h2{
+  opacity: 0;
+color: rgb(255, 255, 255);
+font-size: 2vw;
+font-family: 'berkeley';
+}
+
+
+#budaya.ada{
+  opacity: 1;
+  transition: 2s;
+}
+
+.title .perang{
+  height: 50vh;
+  width: 100%;
+  align-items: start;
+  justify-content: center;
+  display: flex;
+  opacity: 1;
+  transition: 2s;
+  transform: rotate(-3deg);
+
+}
+.title .perang h1{
+  margin-top: -3vh;
+  color: white;
+  font-weight: normal;
+  font-size: 12vw;
+  font-family: 'elbrush';
+  opacity: 0;
+  }
+  .perang h1.muncul{
+    animation: judulTampil 3s;
+    opacity: 1;
+  }
+
+ .perang.float{
+    animation: float1 10s linear infinite;
+    animation-direction: alternate;
+    
+  }
+#perang{
+  transition: 1s;
+}
+.perang h1:hover{
+  color: #636060;
+  /* text-shadow: -1px 1px 3px hsl(0, 0%, 0%),
+  1px 1px 0 #13ff0b,
+ 1px -1px 0 #ff0303,
+-1px -1px 0 #0026ff; */
+  cursor: default;
+}
+  @keyframes float1 {
+    0%{
+      
+      transform: translateY(-8px) translateX(-5) rotate(-3deg) ;
+    }
+    
+    100%{
+  
+      transform: translateY(8px) translateX(5px) rotate(3deg) ;
+    }
+    
+  }
+
+
+  @keyframes judulTampil {
+    0%{
+      
+      transform: scale(3) rotate(25deg) ;
+    }
+    100%{
+      
+      transform: scale(1) rotate(0);
+  
+    }
+    
+  }
+  
+
+
+  .banner .judul.munculJudul {
+
+    opacity: 1;
+    transition: 2s;
+  
+  }
+  .banner .judul.munculJudul img{
+    position: absolute;
+    animation: judulTampil 3s;
+    opacity: 1;
+  
+  }
+  
+
+
+
+
+
+
+
 
 .banner .judul{
   opacity: 0;
-  
+  position: relative;
+  top: 1%;
   
 }
 
-.banner .judul.munculJudul {
+/* .banner .judul.munculJudul {
 
   opacity: 1;
   transition: 2s;
@@ -141,14 +289,9 @@ overflow: hidden;
   animation: judulTampil 3s;
   opacity: 1;
 
-}
+} */
 
 
-.float{
-  animation: float1 15s linear infinite;
-  animation-direction: alternate-reverse;
-
-}
 
 .banner .judul-2{
   opacity: 0;
@@ -168,22 +311,34 @@ overflow: hidden;
 .pakhaji {
   transition: 2s ;
   position: relative;
-
+animation: skala 3S;
 }
+@keyframes skala {
+  0%{
+    transform: scale(1.6) ;
+  }
+  100%{
+    transform: scale(1) ;
+  
+  }}
 .peternak {
-
+  animation: skala 3S;
   transition: 2s;
   
 }
 
 .side{
   z-index: 99;
+ 
   position: fixed;
   width: 3%;
   height: 100vh;
+  left: 0;
+  top: 0;
 }
 
 .sosmed{
+
   height: 100px;
   margin-top: 450px;
   display: flex;
@@ -192,6 +347,7 @@ overflow: hidden;
 }
 .sosmed ul li{
   position: relative;
+  z-index: 99;
   left: -15px;
   padding: 20px;
   list-style: none;
@@ -200,6 +356,7 @@ overflow: hidden;
   text-decoration: none;color: #ffffff;
 }
 .sosmed ul li a img{
+    position: absolute;
   width: 28px;
   height: 28px;
   transition: 0.3s;
@@ -227,24 +384,20 @@ overflow: hidden;
   z-index: 99;
   position: fixed;
   top: 0;
- right: 0;
+ right: -10px;
   height: 100vh;
-  width: 50px;
-  opacity: 1;
-  transition: 2s;
+  width: 4%;
 }
 
-.sidebar.muncul{
-  opacity: 1;
-  transition: 4s;
-}
+.sidebar .c{
 
+}
 .sidebar a{
   position: relative;
   top: 180px;
   font-family:  'brush2';
   text-decoration: 0;
-  color: black;
+  color: rgba(255, 249, 249, 0.878);
   font-size: 30px;
 }
 .sidebar a p{
@@ -254,19 +407,8 @@ overflow: hidden;
   
 }
 .sidebar a:hover{
-  color: rgb(254, 254, 255);
+  color: rgb(130, 130, 130);
 
-}
-.sidebar img{
-  opacity: 0.7;
-  top: 120px;
-  width: 45px;
-  height: 380px;
-  right: 0;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 
@@ -304,6 +446,9 @@ overflow: hidden;
    right: 15px;
    opacity: 1;
   }
+  #full{
+    opacity: 0;
+  }
 .tombol  span{
   font-size: 20px;
   padding-right: 15px;
@@ -313,7 +458,8 @@ overflow: hidden;
 
 .panah-scroll{
   position: relative;
-  height: 100vh;
+  z-index: 99;
+  height: 10vh;
   width: 100%;
   opacity: 0;
   
@@ -471,11 +617,20 @@ color: white;
 .trans1 img{
   position: relative;
   width: 100%;
-   object-fit: cover;
+   object-fit: contain;
 }
 
-
-
+.tutup{
+  position: relative;
+  background-color: blue;
+  bottom: 40vh;
+}
+.tutup img{
+  z-index: 99;
+  position: relative;
+  width: 100%;
+ 
+}
 /* ////////KONTEN1/////////// */
 .latar{
   background-color: #8a2e26;
@@ -487,10 +642,8 @@ color: white;
 .konten{
   transition: 2s;
   animation: fade2 1s;
-  height: 70vh;
+  height: 120vh;
   width: 100%;
-
-
 
 }
 .intro{
@@ -502,21 +655,30 @@ top: 10%;
   align-items: center;
   opacity: 0;
   transition: 1s;
-  transform: translateY(-3vw);
+  z-index: 91;
+
   
 }
 .intro.muncul{
   opacity: 1;
   transition: 3s;
-  transform: translateY(0);
+
 }
 .intro .text{
   width: 100%;
   color: white;
   position: relative;
- 
-  
-  
+  top: 10%;
+
+}
+
+.intro .text .aa{
+  opacity: 0;
+  transition: 1s;
+}
+.intro .text .aa.muncul{
+  opacity: 1;
+  transition: 2s;
 }
 .intro .text h2{
   position: relative;
@@ -524,12 +686,14 @@ top: 10%;
   display: flex;
   justify-content: center;
   font-size: 5vw;
-  color: #f2f2f2b1;
-  font-family:  'brush';
+  color: #000000b1;
+  /* font-family:  'edo'; */
+  font-weight: normal;
  
 }
 .intro .text h1{
-  font-family: 'edo';
+  /* font-family: 'edo'; */
+  font-weight: normal;
   color: #8a2e26;
   line-height: 180px;
   font-size: 10vw;
@@ -573,14 +737,15 @@ top: 10%;
   width: 100%;
   opacity: 0;
   transition: 1s;
-  transform: translateY(3vw);
+  
 }
 .konten1.muncul{
   opacity: 1;
   transition: 3s;
-  transform: translateY(0);
+  
 }
 .cerita{
+  flex: 1;
   left: 5%;
   z-index: 96;
   position: absolute;
@@ -598,9 +763,10 @@ top: 10%;
   color: white;
 }
 .wadahternak{
+  flex: 1;
   z-index: 95;
   left: 10%;
-  height: 110vh;
+  height: 120vh;
   width: 100%;
   position: relative;
   
@@ -628,6 +794,7 @@ top: 10%;
 .teks p{
   color: white;
   font-size: 2vw;
+  font-weight: normal;
 }
 .konten2{
  
@@ -773,12 +940,13 @@ top: 10%;
 .konten5{
  
   display: flex;
-  height: 120vh;
+  height: 100vh;
   width: 100%;
 }
 .konten5 .mancing{
-  position: relative;
-  flex: 6;
+ 
+
+  flex: 5;
   opacity: 0;
   transition: 2s;
 }
@@ -788,13 +956,15 @@ top: 10%;
   transform: scale(1.1) translateX(5vw);
 }
 .konten5 .teks{
+max-width: 48%;
   position: relative;
   display: flex;
  align-items: center;
-  flex: 2;
-  right: 4%;
+  flex: 6;
   opacity: 1;
   transition: 2s;
+  
+
   
 }
 
@@ -805,7 +975,7 @@ top: 10%;
 
 .konten5 .mancing img{
  object-fit: cover;
- max-height: 110vh;
+ max-height: 80vh;
   max-width: 100%;
  
 }
@@ -857,7 +1027,7 @@ top: 10%;
 
 .konten7{
  
-  height: 80vh;
+  height: 90vh;
   display: flex;
   width: 100%;
 }
@@ -927,7 +1097,352 @@ top: 10%;
   max-width: 100%;
 }
 
+.konten9{
+  position: relative;
 
+  height: 90vh;
+  width: 100%;
+  opacity: 0;
+  transition: 1s;
+  display: flex;
+}
+.konten9 .kaget {
+  flex: 2;
+  
+  position: relative;
+  left: 3%;
+}
+.konten9.muncul{
+  transition: 3s;
+opacity: 1;
+animation: kaget 2s;
+}
+.konten9 .kaget img{
+  position: absolute;
+  object-fit: cover;
+  max-height: 75vh;
+  max-width: 100%;
+}
+.konten9 .teks{
+  left: 6%;
+  position: relative;
+  top: 3%;
+  flex: 2;
+
+}
+.konten9 .teks p{
+  max-width: 80%;
+}
+
+#kaget1{
+  opacity: 0;
+  transition: 1s;
+ animation: kaget 2s;
+ transform: scale(1.2) translateX(4vw);
+}
+#kaget1.muncul{
+  opacity: 1;
+  transition: 5s;
+  transform: scale(1) translateX(1vw);
+}
+
+
+.konten10{
+  position: relative;
+  height: 90vh;
+  width: 100%;
+  opacity: 0;
+  transition: 1s;
+  display: flex;
+  
+}
+.konten10.muncul{
+  opacity: 1;
+  transition: 2s;
+
+}
+.konten10 .sapu {
+  flex: 1;
+}
+#sapu{
+  opacity: 0;
+  transition: 1s;
+  transform: translateX(8vw);
+}
+#sapu.muncul{
+  opacity: 1;
+  transition: 7s;
+  transform: translateX(0);
+}
+.konten10 .sapu img{
+  position: absolute;
+  object-fit: cover;
+ max-height: 80vh;
+  max-width: 100%;
+}
+.konten10 .teks{
+  position: relative;
+  flex: 1;
+  max-width: 35%;
+  right: 2%;
+  top: 10%;
+
+}
+
+.adu{
+
+  height: 140vh;
+  width: 100%;
+  transition: 2s;
+}
+.adu .teks{
+  display: flex;
+  justify-content: center;
+  height: 30vh;
+  align-items: center;
+  position: relative;
+
+}
+.adu .teks p{
+  max-width: 70%;
+  text-align: center;
+}
+
+.gelud{
+  height: 110vh;
+  width: 100vw;
+  display: flex;
+  justify-content:center ;
+  opacity: 0;
+  transition: 1s;
+}
+.gelud.muncul{
+  transition: 2s;
+  opacity: 1;
+}
+.aksi{
+  display: flex;
+  justify-content:center ;
+  height: 100vh;
+  width: 100vw;
+background-size: cover;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: gelud 2s infinite ;
+  animation-timing-function: ease-out;
+ 
+}
+@keyframes gelud {
+  0%{
+    background: url(../img/gelud.png) ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  20%{
+    background: url(../img/gelud1.png);
+    background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  }
+  40%{
+    background: url(../img/gelud2.png);
+    background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  }
+  60%{
+    background: url(../img/gelud3.png);
+    background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  }
+  80%{
+    background: url(../img/gelud4.png);
+    background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  }
+  100%{
+    background: url(../img/gelud2.png);
+    background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  }
+}
+
+
+
+.konten11{
+  height: 56vh;
+  width: 100%;
+  
+  transition: 2s;
+  
+}
+.konten11 .ucul {
+position: relative;
+left: 10%;
+opacity: 0;
+transition: 1s;
+transform: translateX(-4vw);
+}
+.ucul.muncul{
+  opacity: 1;
+transition: 2s;
+transform: translateX(0);
+}
+.konten11 .ucul img{
+  position: absolute;
+  object-fit: cover;
+ max-height: 50vh;
+  max-width: 100%;
+}
+
+
+
+.konten12{
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  
+  transition: 2s;
+  display: flex;
+}
+.konten12 .cow {
+  flex: 1;
+  display: flex;
+  justify-content: end;
+  position: relative;
+  bottom: 10vh;
+  right: 5%;
+  opacity: 0;
+  transition: 1s;
+  transform: translateY(4vh);
+}
+.konten12 .cow.muncul{
+opacity: 1;
+transition: 2s;
+transform: translateY(0);}
+
+.konten12 .cow img{
+  position: absolute;
+  object-fit: cover;
+ max-height: 80vh;
+  max-width: 100%;
+}
+.konten12 .teks{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  position: relative;
+  left: 10%;
+  flex: 1;
+  opacity: 0;
+  transition: 1s;
+}
+.konten12 .teks.muncul{
+opacity: 1;
+  transition: 2s;}
+
+.konten13{
+  height: 120vh;
+  width: 100%;
+}
+
+.konten13 .a{
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+.konten13 .a img{
+
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+}
+#konten13{
+  opacity: 0;
+  transition: 2s;
+}
+#konten13.muncul{
+  opacity: 1;
+  transition: 5s;
+}
+.konten13 .teks{
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.konten13 .teks p{
+  text-align: center;
+  max-width: 70%;
+  animation: float 5s infinite;
+  animation-direction: alternate-reverse;
+}
+
+
+.konten14{
+  height: 100vh;
+  width: 100%;
+}
+.konten14 h2{
+  font-size: 50px;
+  color: white;
+  font-weight: normal;
+}
+.konten14 .a{
+  background-color: #636060a8;
+  width: 20%;
+  text-align: end;
+}
+.konten14 .atas{
+  position: relative;
+  display: flex;
+left: 15%;
+padding-bottom: 2vh;
+
+  align-items: end;
+  height: 50vh;
+}
+.konten14 .teks{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+.konten14 p{
+  max-width: 70%;
+}
+.yt{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.yt iframe{
+  width: 100%;
+  height: 100vh;
+  opacity: 0.4;
+}
+
+
+
+.konten15{
+  height: 100vh;
+  width: 100%;
+}
 /* ///////////////////////////////////////////////////////////////////////// */
 
 
@@ -941,6 +1456,14 @@ top: 10%;
   @font-face {
     font-family: 'edo';
     src: url(../font/edosz.ttf);
+  }
+  @font-face {
+    font-family: 'berkeley';
+    src: url(../font/Berkeley.ttf);
+  }
+  @font-face {
+    font-family: 'elbrush';
+    src: url(../font/Elbrush.ttf);
   }
   @font-face {
     font-family: 'heycomic';
@@ -958,29 +1481,20 @@ top: 10%;
     font-family: 'brush2';
     src: url(../font/brush2.ttf);
   }
-
   @keyframes float {
     0%{
-      opacity: 0.8;
-      transform: translateY(8px) translateX(-8px) rotate(0) ;
+      
+      transform: translateY(10px) translateX(2px) rotate(-1deg) ;
   
     }
     
-    100%{opacity: 1;
-      transform: translateY(-8px) translateX(-8px) rotate(5deg) ;
-    }
-    
-  }
-  @keyframes float1 {
-    0%{
-      transform: translateY(-8px) translateX(-5px) rotate(0) ;
-    }
-    
     100%{
-      transform: translateY(8px) translateX(5px) rotate(8deg) ;
+      transform: translateY(-10px) translateX(-2px) rotate(1deg) ;
     }
     
   }
+
+
   
   @keyframes float3 {
     0%{
@@ -1006,17 +1520,7 @@ top: 10%;
     
   }
   
-  @keyframes judulTampil {
-    0%{
-      transform: scale(3) rotate(25deg) ;
-    }
-    100%{
-      transform: scale(1) rotate(0);
-  
-    }
-    
-  }
-  
+
   @keyframes slideKiri {
       0%{
           transform: translateX(-200px);
@@ -1040,6 +1544,7 @@ top: 10%;
   object-fit: cover;
   max-height: 26vh;
   max-width: 100%;
+  overflow: hidden;
 }
 .asap4{
   height: 21vh;

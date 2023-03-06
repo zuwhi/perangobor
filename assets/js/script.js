@@ -1,52 +1,12 @@
-// $(document).ready(function(){
-//     $(window).scroll(function(){
-//         var wScroll = $(this).scrollTop;
-//         console.log(wScroll)
-//     })
-// })
-// function pudar(){
-//     let openBg = document.querySelector('.openingBg');
-//     let fade = document.createElement("style");
-//     fade.innerHTML = `@keyframes fade {
-//         0%{
-//           opacity: 0;
-//         }
-//         100%{
-//           opacity: 1;
-//         }}
-//         .openingBg{
-//             animation: fade 5s;
 
-//         }
-//         `
-//         ;
-//         openBg.appendChild(fade);
-//     location.href = 'main.html';
-// }
+window.onload = function(){
+    $('#load').css({'display' : 'none'});
+    setUp();
+}
+
+function setUp(){
 
 
-function fullScreen() {
-    if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
-     (!document.mozFullScreen && !document.webkitIsFullScreen)) {
-        $('#full').css({'opacity' : '1'})
-      if (document.documentElement.requestFullScreen) {  
-        document.documentElement.requestFullScreen();  
-      } else if (document.documentElement.mozRequestFullScreen) {  
-        document.documentElement.mozRequestFullScreen();  
-      } else if (document.documentElement.webkitRequestFullScreen) {  
-        document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);  
-      }  
-    } else {  
-        $('#full').css({'opacity' : '0'})
-      if (document.cancelFullScreen) {  
-        document.cancelFullScreen();  
-      } else if (document.mozCancelFullScreen) {  
-        document.mozCancelFullScreen();  
-      } else if (document.webkitCancelFullScreen) {  
-        document.webkitCancelFullScreen();  
-      }  
-    }  
-  }
 
 
 
@@ -58,7 +18,7 @@ function fullScreen() {
 
 
 // ==================HALAMAN MAIN PAGE=================
-var audio = new Audio('assets/sound/cut.mp3');
+var audio = new Audio('assets/sound/cu.mp3');
 
 var autoScrollDelay = 1
 var autoScrollSpeed = 2
@@ -81,7 +41,10 @@ var auto= 20;
 
 var count= 0;
 
-function putar(){
+
+
+$('#sound').click(
+    function putar(){
         if(count== 0){
             count=1
             $('#sound').css({'opacity' : '0'})
@@ -94,22 +57,31 @@ function putar(){
             }
    
 }
+)
 
-function autoScroll(){
-    if(count== 0){
-        count=1
-        $('#scroll').css({'opacity' : '0'})
-         auto= 20;
-    }
-        else{
-            $('#scroll').css({'opacity' : '1'})
-            count = 0;
-             auto= aa;
-            
-        }
-        setAutoScroll(auto)
-    // setAutoScroll(auto)
-}
+$('#full').click(
+    function fullScreen() {
+        if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
+         (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+            $('#full').css({'opacity' : '1'})
+          if (document.documentElement.requestFullScreen) {  
+            document.documentElement.requestFullScreen();  
+          } else if (document.documentElement.mozRequestFullScreen) {  
+            document.documentElement.mozRequestFullScreen();  
+          } else if (document.documentElement.webkitRequestFullScreen) {  
+            document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);  
+          }  
+        } else {  
+            $('#full').css({'opacity' : '0'})
+          if (document.cancelFullScreen) {  
+            document.cancelFullScreen();  
+          } else if (document.mozCancelFullScreen) {  
+            document.mozCancelFullScreen();  
+          } else if (document.webkitCancelFullScreen) {  
+            document.webkitCancelFullScreen();  
+          }  
+        }  
+      })
 
 
 
@@ -149,11 +121,11 @@ setTimeout(function(){
     $('#budaya').addClass('ada')},3000)
 },3000)
 
-
+$('.panah ').click(
 function panah(){
-    $('html').animate({scrollTop: 600}, 'slow');
+    $('html').animate({scrollTop: 600}, 1000);
     
-}
+})
 
 var pakhaji = document.querySelector(".pakhaji");
 var peternak = document.querySelector(".peternak");
@@ -458,8 +430,7 @@ $('.bakar2').css({'transform': 'translateY('+bakar/15+'px) scale(1.2)'})
         
     }else if (value < $('.adu').offset().top-350){
         $('.gelud').removeClass('muncul');
-        $('.latar').css({'background-color' : ''
-        })
+        
     }
 
     if (value < $('.konten11').offset().top-500){
@@ -531,4 +502,5 @@ $('.bakar2').css({'transform': 'translateY('+bakar/15+'px) scale(1.2)'})
 
 
 
-}
+}}
+

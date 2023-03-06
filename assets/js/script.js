@@ -58,7 +58,7 @@ function fullScreen() {
 
 
 // ==================HALAMAN MAIN PAGE=================
-var audio = new Audio('asset/sound/cut.mp3');
+var audio = new Audio('assets/sound/cut.mp3');
 
 var autoScrollDelay = 1
 var autoScrollSpeed = 2
@@ -478,12 +478,12 @@ $('.bakar2').css({'transform': 'translateY('+bakar/15+'px) scale(1.2)'})
         $('.cow').addClass('muncul');
     }
 
-    if (value < $('.konten13').offset().top-500){
+    if (value < $('.konten13').offset().top-200){
         $('#konten13').removeClass('muncul');
 
-    }else if (value > $('.konten13').offset().top-500){
+    }else if (value > $('.konten13').offset().top-200){
         $('#konten13').addClass('muncul');
-        $('.cow').addClass('muncul');
+        $('.cow').removeClass('muncul');
     }
 
     // pakhaji.style = 'height : '+ value +'px,width :'+ value +'px';

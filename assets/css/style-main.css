@@ -70,6 +70,7 @@ nav ul li a:hover::after{
 background-size: cover;
 animation: fade 2s;
 overflow: hidden;
+width: 100%;
   
 }
 @keyframes fade {
@@ -329,7 +330,7 @@ animation: skala 3S;
 
 .side{
   z-index: 99;
- 
+
   position: fixed;
   width: 3%;
   height: 100vh;
@@ -380,7 +381,6 @@ animation: skala 3S;
 }
 
 .sidebar{
-
   z-index: 99;
   position: fixed;
   top: 0;
@@ -634,9 +634,10 @@ color: white;
 /* ////////KONTEN1/////////// */
 .latar{
   background-color: #8a2e26;
-  width: auto;
+  width: 100%;
   height: max-content;
   transition: 3s;
+  overflow: hidden;
 }
 
 .konten{
@@ -845,7 +846,7 @@ top: 10%;
   height: 65vh;
   width: 100%;
   opacity: 0;
-  transition: 3s;
+  transition: 1s;
 }
 .konten3.muncul{
   opacity: 1;
@@ -900,7 +901,7 @@ top: 10%;
   left: 3%;
   flex: 2;
   opacity: 0;
-  transition: 2s;
+  transition: 1s;
 }
 
 .salam.muncul{
@@ -1393,22 +1394,26 @@ opacity: 1;
 .konten14{
   height: 100vh;
   width: 100%;
+ 
+}
+.konten14 a{
+  text-decoration: none;
 }
 .konten14 h2{
   font-size: 50px;
   color: white;
   font-weight: normal;
+  text-decoration: none;
 }
 .konten14 .a{
-  background-color: #636060a8;
   width: 20%;
-  text-align: end;
+  
 }
 .konten14 .atas{
   position: relative;
   display: flex;
 left: 15%;
-padding-bottom: 2vh;
+padding-bottom: 5vh;
 
   align-items: end;
   height: 50vh;
@@ -1419,6 +1424,7 @@ padding-bottom: 2vh;
   align-items: center;
   width: 100%;
   text-align: center;
+  position: absolute;
 }
 .konten14 p{
   max-width: 70%;
@@ -1432,8 +1438,8 @@ padding-bottom: 2vh;
   align-items: center;
 }
 .yt iframe{
-  width: 100%;
-  height: 100vh;
+  width: 60%;
+  height: 80vh;
   opacity: 0.4;
 }
 
@@ -1451,8 +1457,74 @@ padding-bottom: 2vh;
 
 
 
+footer{
+  background-color: #636060;
+  height: 40vh;
+  display: flex;
+  color: white;
+}
+footer .kaki{
+  display: flex;
+  width: 100%;
+  height: 40vh;
+  justify-content: space-evenly;
+}
+.conten,.polow,.maps,.lokasi{
+  width: 5vw;
+  background-color: #d87708;
+  flex: 2;
+}
+.a{
+  flex: 1;
+}
+ul li{
+  list-style: none;
+  padding: 2% 0;
+}
 
+ul li p{
+  font-size: 1.4vw;
+  font-weight: normal;
+}
+.conten{
+  padding: 2% 5%;
+  display: flex;
+  flex-direction: column;
+}
 
+.polow{
+  padding: 2% 0;
+  
+}
+.polow ul li{
+  list-style: none;
+  padding: 1% 0;
+}
+.polow ul li a{
+  text-decoration: none;
+  color: white;
+  font-size: 1.4vw;
+  font-weight: normal;
+}
+.polow ul li a:hover{
+  color: #444444;}
+.maps{
+  padding: 2% 0;
+}
+.maps p{
+  padding: 2% 0;
+  font-size: 1.4vw;
+  font-weight: normal;
+}
+.lokasi {
+  padding: 2%;
+  
+}
+.lokasi iframe{
+ 
+  height: 20vh;
+  width: 20vw;
+}
   @font-face {
     font-family: 'edo';
     src: url(../font/edosz.ttf);
@@ -1484,12 +1556,12 @@ padding-bottom: 2vh;
   @keyframes float {
     0%{
       
-      transform: translateY(10px) translateX(2px) rotate(-1deg) ;
+      transform: translateY(10px) translateX(2px)  ;
   
     }
     
     100%{
-      transform: translateY(-10px) translateX(-2px) rotate(1deg) ;
+      transform: translateY(-10px) translateX(-2px) ;
     }
     
   }

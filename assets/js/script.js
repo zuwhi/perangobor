@@ -192,19 +192,7 @@ window.onscroll = function(){
     if(value > 500){
         $('.page2 .pic2').addClass('muncul');      
     }
-    if (value > 1400){
-       
-       
-    //    ternak = sapi > 50 ? 50 : (sapi < 0 ? 0 : sapi);
-        // $('#ternak2').css({'transform': 'translateY('+ternak+'px)'})
-        // $('#ternak4').css({'transform': 'translateX(-'+value/40+'px)'})
-        // $('#ternak3').css({'transform': 'translateY('+value/40+'px)'})
-        // $('#ternak10').css({'transform': 'translateX('+-ternak/2+'px)'})
-        // $('#ternak5').css({'transform': 'translateX('+-ternak+'px) translateY('+value/60+'px)'})
-        // $('#ternak7').css({'transform': 'translateY(-'+value/60+'px)'})
-        // $('#ternak9').css({'transform': 'translateX('+ternak+'px)'})
-        // $('#ternak6').css({'transform': 'translateY(-'+ternak/2+2+'px) translateX(-'+value/70+'px)'})
-    }
+
     if(value > 1400){
         $('.page2 .story-2').addClass('muncul');
        
@@ -250,14 +238,17 @@ window.onscroll = function(){
     //////////////////////////////////// WADAHSAPIIIIIIII\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     ternak= (value-2000)/20*1.5;
     console.log('teranknya : '+ ternak)
-    $('#ternak2').css({'transform': 'translateY('+ternak+'px)'})
+    $('#ternak2').css({'transform': 'translateY('+ternak+'px)', })
     $('#ternak4').css({'transform': 'translateX(-'+value/40+'px)'})
     $('#ternak3').css({'transform': 'translateY('+value/40+'px)'})
     $('#ternak10').css({'transform': 'translateX('+-ternak+'px)'})
     $('#ternak5').css({'transform': 'translateX('+-ternak+'px) translateY('+value/60+'px)'})
     $('#ternak7').css({'transform': 'translateY(-'+value/60+'px)'})
     $('#ternak9').css({'transform': 'translateX('+ternak+'px)'})
-    $('#ternak6').css({'transform': 'translateY(-'+value/70+'px) translateX(-'+value/70+'px)'})
+    $('#ternak10').css({'transform': 'translateY(-'+value/70+'px) translateX('+value/70+'px)'})
+    $('#ternak12').css({'transform': 'translateY(-'+value/70+'px) translateX(-'+value/70+'px)'})
+    $('#ternak14').css({'transform': 'translateY('+value/70+'px) translateX('+value/70+'px)'})
+    $('#ternak15').css({'transform': 'translateX(-'+value/80+'px) translateX('+value/70+'px)'})
     //////////////////////////////////// WADAHSAPIIIIIIII\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 
@@ -363,7 +354,12 @@ window.onscroll = function(){
         $('.bakar2').removeClass('muncul');
     }
     if (value > $('.konten7').offset().top-200){
-        $('.latar').css({'background-color' : 'black'})
+
+        $('.latar').css({'background': 'black'})
+        
+
+
+
         $('.bakar').addClass('muncul');
         $('.bakar2').addClass('muncul');
         $('.konten6').addClass('hilang');

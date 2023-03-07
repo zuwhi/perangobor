@@ -360,10 +360,12 @@ window.onscroll = function(){
         $('.latar').css({'background-color' : '#8a2e26'
         })
         $('.bakar').removeClass('muncul');
+        $('.bakar2').removeClass('muncul');
     }
     if (value > $('.konten7').offset().top-200){
         $('.latar').css({'background-color' : 'black'})
         $('.bakar').addClass('muncul');
+        $('.bakar2').addClass('muncul');
         $('.konten6').addClass('hilang');
         
         
@@ -371,7 +373,7 @@ window.onscroll = function(){
 batas = value > 100 ? 100 : (value < 0 ? 0 : value);
 bakar= value-4500;
 console.log('bakar :'+bakar/15)
-$('.bakar2').css({'transform': 'translateY('+bakar/15+'px) scale(1.2)'})
+// $('.bakar2').css({'transform': 'translateY('+value/200+'px)'})
 
 
     if (value < $('.konten8').offset().top-100){
@@ -381,6 +383,7 @@ $('.bakar2').css({'transform': 'translateY('+bakar/15+'px) scale(1.2)'})
     if (value > $('.konten8').offset().top-100){
         $('.konten8').addClass('muncul');
         $('.bakar').removeClass('muncul');
+        $('.bakar2').removeClass('muncul');
         
     }
 

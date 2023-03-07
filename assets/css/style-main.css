@@ -7,9 +7,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* ::-webkit-scrollbar{
+::-webkit-scrollbar{
   display: none;
-} */
+}
 body{
   overflow-x: hidden;
 }
@@ -602,7 +602,8 @@ z-index: 999;
   opacity: 0;
   color: white;
   flex: 6;
-  left: 8%;
+  left: 3%;
+
 }
 .story .a.muncul{
   top: 0;
@@ -628,7 +629,7 @@ z-index: 999;
   transition: 0.5s;
   color: rgb(252, 252, 252);
   padding: 0 50px;
-  flex: 9;
+  flex: 10;
 }
 .story .b.muncul{
   transform: translateX(0px) ;
@@ -1138,6 +1139,18 @@ right: 8%;
   opacity: 1;
   transition: 3s;
 }
+.bakar2{
+
+  transform: scale(0.5) translateY(20px);
+  opacity: 0;
+  transition: 3s;
+}
+.bakar2.muncul{
+  opacity: 1;
+  transition: 4s;
+  transform: scale(1.1);
+}
+
 .konten7 .bakar img{
   position: absolute;
   object-fit: cover;

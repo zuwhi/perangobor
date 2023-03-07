@@ -1,3 +1,89 @@
+.nav
+{
+  position: fixed;
+  top: 20px;
+  right: 0;
+  width: 80px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+  z-index: 100;
+
+}
+
+.nav .nav-content
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-45deg);
+}
+.nav-content .toggle-btn,
+.nav-content span a
+{
+    height: 55px;
+    width: 55px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.nav-content .toggle-btn
+{
+  font-size: 26px;
+  color: #0e2431;
+  z-index: 100;
+  cursor: pointer;
+  transform: rotate(-225deg);
+  transition: all 0.6s ease;
+}
+
+.nav.open .toggle-btn
+{
+  transform: rotate(0deg);
+}
+
+.nav-content span
+{
+  position: absolute;
+  transition: all 0.6s ease;
+  opacity: 0;
+}
+
+.nav.open .nav-content span
+{
+  transform: rotate(calc(var(--i) * (54deg))) translateY(90px);
+  opacity: 1;
+}
+
+.nav-content span a
+{font-size: 25px;
+  color: #8a2e26;
+  text-decoration: none;
+  transform: rotate(-22deg);
+}
+
+
+.nav-content span a i
+{
+  
+  color: #8e0005;
+  transform: rotate(calc(var(--i) * (360deg/ -8)));
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+.nav-content span a:hover
+{
+  opacity: 1;
+}
+
+
 @media (max-width: 320px) {
   .asap1,.asap2,.asap3,.asap{
     object-fit: cover;
@@ -11,6 +97,9 @@
     position: relative;
     font-size: 20px;
  
+  }
+  .tombol,.sidebar{
+    display: none;
   }
   .asap1,.asap2,.asap3,.asap{
     max-height: 10vh;
@@ -26,6 +115,7 @@
   }
 .banner, .blok1{
     height: 250vh;
+    overflow: hidden;
    
 }
 .trans1{
@@ -61,7 +151,28 @@
     }
     
   }
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 768px) {
+body{
+background-color: #8a2e26;
+}
+  .tombol,.sidebar{
+    display: none;
+  }
+.konten1{
+  opacity: 1;
+}
   .asap1,.asap2,.asap3,.asap{
     object-fit: cover;
     max-height: 50vh;
@@ -88,40 +199,25 @@
   }
 .banner, .blok1{
     height: 250vh;
+    overflow: hidden;
    
 }
 .trans1{
     bottom:  45px;
 }
-.intro, .konten{
-    max-height: 50vh;
+.konten{
+  height: 10vh;
 }
-.intro .text{
-    position: relative;
-    display: flex;
+.intro{
+  height: 0;
+  display: none;
+overflow: hidden;
 }
-.intro .text h2{
-    white-space: nowrap;
-    left: 30%;
-    top: 30%;
-    position: relative;
-    font-size: 5vw;
-    color: #ffffffbf;
-  }
-  .intro .text h1{
-    position: relative;
-    right: 10%;
-    font-size: 10vw;
-  }
-  .intro .text .a{
-    position: relative;
-   right: 30%;
-  }
-  .intro .text .b{
-    position: relative;
-    right: 10%;
-  }
+.konten11 .ucul {
+  position: relative;
+  left: 1%;
 
+  }
 
 #peternak2{
     max-width: 50%;

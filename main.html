@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perang Obor</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
     <link rel="stylesheet" href="assets/css/style-main.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <script src="assets/js/jquery.js"></script>
@@ -15,14 +17,17 @@
 
         <!-- <h1>loading...</h1> -->
     </div>
-    <nav>
+
+
+
+    <nav id="home">
         <!-- <a href=""><span>Home</span></a>
         <a href=""><span>Reviews</span></a>
         <a href=""><span>Contact</span></a> -->
         <ul>
             <li><a href="#tentang">Home</a></li>
-            <li><a href="#">Reviews</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="#kisah">Story</a></li>
+            <li><a href="#kontak">Contact</a></li>
         </ul>
     </nav>
     <div class="banner">
@@ -450,22 +455,81 @@
             </ul>
         </div>
         <div class="follow">
-            <span>Follow Us</span>
+            <span>Follow us</span>
         </div>
     </div>
-    <div class="sidebar">
-        <div class="c">
-            <a href="" ><p>1</p></a>
-        <a href=""><p>2</p></a>
-        <a href=""><p>3</p></a>
-        <a href=""><p>4</p></a>
-        </div>
 
+
+    <div class="nav">
+        <div class="nav-content">
+          <div class="toggle-btn">
+            <i class="fa fa-plus"></i>
+          </div>
+          <span style="--i:1;">
+                <a href="#home"><i class="fas fa-home "></i></a>
+          </span>
+          
+          <span style="--i:2;">
+            <a href="#kisah"><i class="fas fa-book "></i></a>
+          </span>
+  
+          
+      <span style="--i:3;">
+        <a href="#kontak"><i class="fas fa-phone "></i></a>
+      </span>
+  
         
+      <span style="--i:4;">
+        <a href="index.html"><i class="fas fa-redo "></i></a>
+      </span>
+  
+  
+        </div>
+      </div>
+
+
+<!-- <div class="nav">
+    <div class="nav-content">
+      <div class="toggle-btn">
+        <img src="https://img.icons8.com/ios-glyphs/30/null/plus-math.png"/>
+      </div>
+      <span style="--i:1;">
+            <a href="#home"><img src="https://img.icons8.com/ios-glyphs/30/null/home-page--v1.png"/></a>
+      </span>
+      
+      <span style="--i:2;">
+        <a href="#kisah"><img src="https://img.icons8.com/ios-glyphs/30/null/storytelling.png"/></a>
+      </span>
+
+      
+  <span style="--i:3;">
+    <a href="#kontak"><img src="https://img.icons8.com/ios-glyphs/30/null/contact-card.png"/></a>
+  </span>
+
+    
+  <span style="--i:4;">
+    <a href="#"><i class="fas fa-map-marker-alt"></i></a>
+  </span>
+
+
+  <span style="--i:5;">
+    <a href="#"><i class="fas fa-cogs"></i></a>
+  </span>
     </div>
+  </div> -->
+
+
+
+
+
+
+
+
 
 
 <div class="latar">
+
+
 
     <div class="konten" id="konten">
         <!-- <div class="trans1"><img src="assets/img/trans.png" alt="" srcset=""></div> -->
@@ -483,7 +547,7 @@
     </div>
 
 
-    <div class="konten1">
+    <div class="konten1" id="kisah">
         <div class="cerita">
             <h1>Sejarah</h1>
             <h2>Perang Obor</h2>
@@ -510,7 +574,6 @@
             <img src="assets/img/ternak4.png" class="ternak" id="ternak4" style="z-index: 7;">
             <img src="assets/img/ternak10.png" class="ternak" id="ternak10" style="z-index: 16;">
             <img src="assets/img/ternak9.png" class="ternak" id="ternak9" style="z-index: 7;">
-            <img src="assets/img/ternak8.png" class="ternak" id="ternak8" style="z-index: 7;">
             <img src="assets/img/ternak7.png" class="ternak" id="ternak7" style="z-index: 7;">
             <img src="assets/img/ternak6.png" class="ternak" id="ternak6" style="z-index: 7;">
             <img src="assets/img/ternak12.png" class="ternak" id="ternak12" style="z-index: 7;">
@@ -545,7 +608,7 @@
             <div class="teks"><p>Meski berat, Ki Gemblong menyanggupinya</p></div>
         </div>
     </div>
-    <div class="konten5">
+    <div class="konten5" id="konten5">
         <!-- <div class="a"></div> -->
         <div class="mancing"><img src="assets/img/mancing1.png" alt="" srcset=""></div>
         <div class="teks"><p>Setiap pagi dan sore Ki Gemblong selalu memandikan 
@@ -603,7 +666,7 @@
             jampi-jampi (jamu) demi kesembuhan
             binatang-binatang piaraannya itu, tetapi
             hewan-hewan itu tetap tidak sembuh.</p>
-            <br><br><br>
+            <br>
             <p>
                 Akhirnya Kyai Babadan mengetahui
                 penyebab binatang piaraannya menjadi
@@ -682,7 +745,8 @@
     <div class="konten14">
         <a href="">
         <div class="yt">
-            <iframe  src="https://www.youtube.com/embed/mso-x9RQugY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>        </div>
+            <iframe  src="https://www.youtube.com/embed/mso-x9RQugY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>        
+        </div>
         <div class="atas">
             <div class="a">
                 <h2>Tradisi</h2>
@@ -705,14 +769,59 @@
     </div>
 
     <div class="konten15">
+        <div class="img-slide">
+            <div class="slide active">
+                <img src="assets/img/slide1.png" alt="">
+                <div class="info">
+                    <h2>Slide 01</h2>
+                    <p>Berikut beberapa potret kegiatan perang obor</p>
 
+                </div>
+            </div>
+            <div class="slide">
+                <img src="assets/img/slide.jpg" alt="">
+                <div class="info">
+                    <h2>Slide 02</h2>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="assets/img/opening.jpg" alt="">
+                <div class="info">
+                    <h2>Slide 03</h2>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="assets/img/slide1.png" alt="">
+                <div class="info">
+                    <h2>Slide 04</h2>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="assets/img/slide.jpg" alt="">
+                <div class="info">
+                    <h2>Slide 05</h2>
+                </div>
+            </div>
+            <div class="navi">
+                <div class="btn"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+            </div>
+
+        </div>
+        <div class="teks">
+            <h1>Galeri</h1>
+            <h1>Perang Obor</h1>
+        </div>
     </div>
    
 
 </div>
 
 <footer>
-    <div class="kaki">
+    <div class="kaki" id="kontak">
         <div class="a"></div>
         <div class="conten">
             <h2>Content Information</h2>
@@ -750,6 +859,8 @@
     </div>
 </footer>
     
+<script src="assets/js/drag.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
 
     
 </body>

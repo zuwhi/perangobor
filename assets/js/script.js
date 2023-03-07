@@ -1,44 +1,29 @@
 
 window.onload = function(){
     $('#load').css({'display' : 'none'});
-    setUp();
-}
-
-function setUp(){
-
-
-
-
-
-
-
-
-
-
+    
 
 
 // ==================HALAMAN MAIN PAGE=================
-var audio = new Audio('assets/sound/cu.mp3');
+var audio = new Audio('assets/sound/cut.mp3');
 
-var autoScrollDelay = 1
-var autoScrollSpeed = 2
-var autoScrollTimer
-function setAutoScroll(newValue) {
-    autoScrollDelay = newValue ? newValue : autoScrollDelay //using autoScrollDelay instead of autoScrollSpeed
-    if (autoScrollTimer) {
-        clearInterval(autoScrollTimer)
-    }
-    if (autoScrollDelay) {
-        autoScrollTimer = setInterval(function(){
-            window.scrollBy(0,autoScrollSpeed)
-      },autoScrollDelay)
-    }
-}
+// var autoScrollDelay = 1
+// var autoScrollSpeed = 2
+// var autoScrollTimer
+// function setAutoScroll(newValue) {
+//     autoScrollDelay = newValue ? newValue : autoScrollDelay //using autoScrollDelay instead of autoScrollSpeed
+//     if (autoScrollTimer) {
+//         clearInterval(autoScrollTimer)
+//     }
+//     if (autoScrollDelay) {
+//         autoScrollTimer = setInterval(function(){
+//             window.scrollBy(0,autoScrollSpeed)
+//       },autoScrollDelay)
+//     }
+// }
 
 
 audio.play();
-var auto= 20;
-
 var count= 0;
 
 
@@ -133,7 +118,7 @@ var versus = document.querySelector(".banner img");
 var judul2 = document.querySelector(".judul-2");
 window.onscroll = function(){
     let value = window.scrollY;
-    transY = value > 300 ? 300 : (value < 0 ? 0 : value);
+    transY = value > 500 ? 500 : (value < 0 ? 0 : value);
     scale= value/80*0.5;
     console.log(value)
   
@@ -170,7 +155,6 @@ window.onscroll = function(){
         'transition': '5s'
     })
     $('.banner > img ').css({'position' : 'fixed','bottom' : 'initial'})
-    $('.sidebar').removeClass('muncul')
     $('.pembuka .judul-3').removeClass('muncul');
     
    
@@ -188,8 +172,6 @@ window.onscroll = function(){
 
     // #8a2e26
     $('.panah-scroll ').removeClass('muncul');
-    
-    $('.sidebar').addClass('muncul')
 
     $('.konten2 #peternak2').removeClass('muncul');
     }
@@ -237,6 +219,13 @@ window.onscroll = function(){
         // $('.intro .text h2').css({'animation': 'fade 3s','opacity': '1'})
     }
   
+    if (value > $('.konten').offset().top){
+        $('.intro').css({'position': 'fixed'})
+    }
+    else if(value < $('.konten').offset().top){
+        $('.intro').css({'position': 'relative'})
+    }
+
     if (value > $('.konten').offset().top-500){
         
         cek= (value - 2000)/20;
@@ -276,18 +265,19 @@ window.onscroll = function(){
 
 
 
-    if (value > $('.konten1').offset().top-200){
+    if (value > $('.konten1').offset().top-100){
         $('.konten1').addClass('muncul');
         $('.konten1 .ternak').each(function(i)
         {
             setTimeout(function(){
                 //ternak
                 $('.konten1 .ternak').eq(i).addClass('muncul');
-            },600 * i)
+            },400 * i)
         });
+        $('.intro').css({'position': 'relative'})
         
+    }else if(value > $('.konten1').offset().top-250){
         
-    }else if(value > $('.konten1').offset().top-320){
         $('.intro').removeClass('muncul');
 
     }
@@ -317,6 +307,8 @@ window.onscroll = function(){
 
     if (value > $('.konten2').offset().top-200){
         $('.konten1').removeClass('muncul');
+//into intro
+
 
     }
     if (value > $('.konten2').offset().top-400){
@@ -418,7 +410,8 @@ $('.bakar2').css({'transform': 'translateY('+bakar/15+'px) scale(1.2)'})
     }
 
     if (value > $('.adu').offset().top-350){
-       
+        $('.latar').css({'background-color' : '#8a2e26'
+    })
         $('.konten10').removeClass('muncul');
         $('#sapu').removeClass('muncul');
         
@@ -427,6 +420,7 @@ $('.bakar2').css({'transform': 'translateY('+bakar/15+'px) scale(1.2)'})
 
      if (value > $('.adu').offset().top-50){
         $('.gelud').addClass('muncul');
+       
         
     }else if (value < $('.adu').offset().top-350){
         $('.gelud').removeClass('muncul');
@@ -437,7 +431,10 @@ $('.bakar2').css({'transform': 'translateY('+bakar/15+'px) scale(1.2)'})
         
         $('.ucul').removeClass('muncul');
     }else if (value > $('.konten11').offset().top-500){
+        
         $('.ucul').addClass('muncul');
+        $('.latar').css({'background-color' : 'black'
+    })
         $('.gelud').removeClass('muncul');
     }
 
@@ -447,6 +444,7 @@ $('.bakar2').css({'transform': 'translateY('+bakar/15+'px) scale(1.2)'})
     }else if (value > $('.konten12').offset().top-500){
         $('.konten12 .teks').addClass('muncul');
         $('.cow').addClass('muncul');
+      
     }
 
     if (value < $('.konten13').offset().top-200){
@@ -456,6 +454,26 @@ $('.bakar2').css({'transform': 'translateY('+bakar/15+'px) scale(1.2)'})
         $('#konten13').addClass('muncul');
         $('.cow').removeClass('muncul');
     }
+
+
+
+
+
+
+
+
+
+
+
+
+// $(".toggle").click(function cek(){
+//     $(".conten").classList.toggle("open")
+// })
+
+
+
+
+
 
     // pakhaji.style = 'height : '+ value +'px,width :'+ value +'px';
     // pakhaji.style.left= nilai *  -0.5 + 'px';
@@ -502,5 +520,5 @@ $('.bakar2').css({'transform': 'translateY('+bakar/15+'px) scale(1.2)'})
 
 
 
-}}
-
+}
+}

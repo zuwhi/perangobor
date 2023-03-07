@@ -1,7 +1,6 @@
 
 
 
-
 *{
     margin: 0;
     padding: 0;
@@ -11,7 +10,7 @@
   display: none;
 }
 body{
-  overflow-x: hidden;
+  
 }
 #load{
   position: fixed;
@@ -19,7 +18,7 @@ body{
   height: 100vh;
   z-index: 999;
   background: #000 url(../img/loader.gif) no-repeat center center;
-  background-size: 15%;
+  background-size: 20%;
   /* display: flex;
   justify-content: center;
   align-items: center; */
@@ -260,6 +259,7 @@ width: 100%;
   width: 100%;
   object-fit: cover;
   position: fixed;
+  overflow-x: hidden;
 }
 
 .title{
@@ -1234,7 +1234,7 @@ right: 8%;
 }
 .bakar2.muncul{
   opacity: 1;
-  transition: 4s;
+  transition: 5s;
   transform: scale(1.1);
 }
 

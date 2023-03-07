@@ -1,82 +1,6 @@
 
 
-/* ///////////////////////////////////////////HANDHONE\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
-@media (max-width: 320px) {
-.banner img{
-  overflow-x: hidden;
 
-}
-  .banner, .blok1{
-    overflow-x: hidden;
-    background-color: aliceblue;
-    opacity: 0;
-  }
-  .asap1,.asap2,.asap3,.asap{
-    object-fit: cover;
-    max-height: 50vh;
-    max-width: 100%;
-    animation: aa ;
-  }
-  nav ul li a{
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    position: relative;
-    font-size: 20px;
- 
-  }
-  .tombol,.sidebar{
-    display: none;
-  }
-  .asap1,.asap2,.asap3,.asap{
-    max-height: 10vh;
-    max-width: 100%;
-  }
-.wadahternak{
-  height: 110vh;
-}
-  .judul.munculJudul img{
-    top: 15vh;
-    position: relative;
-    height:70vh;
-  }
-.banner, .blok1{
-    height: 250vh;
-    overflow: hidden;
-   
-}
-.trans1{
-    bottom:  30px;
-}
-
-.intro .teks{
-  color: white;
-}
-#peternak2{
-    max-width: 50%;
-    max-height: 70vh;
-}
-.konten6{
-    height: 300vh;
-}
-
-.ikan img{
-    width:50%;
-}
-
-.konten5 .teks{
-    position: relative;
-    top: 30%;
-    align-items: start;
-}
-.konten7{
-    height: 20vh;
-}
-    .konten2,.konten3,.konten4,.konten5,.konten6,.konten7,.konten8{
-  max-height: 50vh;
-  
-    }
-    
-  }
 
 
 
@@ -111,8 +35,8 @@ body{
     text-decoration: none;
     color: rgb(255, 255, 255);
     position: relative;
-    font-size: 20px;
-    display: none;
+    font-size: 25px;
+  
   
   }
   .asap1,.asap2,.asap3,.asap{
@@ -171,7 +95,9 @@ overflow: hidden;
  height: auto;
   
     }
-
+.perang{
+  margin-top: 20px;
+}
 .page2{
 height: 100px;
 }
@@ -342,3 +268,238 @@ left: 10px;
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ///////////////////////////////////////////HANDHONE\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+@media screen and (max-width: 380px) {
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+.blok1,.banner{
+
+  overflow-x: hidden;
+}
+    .asap1,.asap2,.asap3,.asap{
+      object-fit: cover;
+      max-height: 50vh;
+      max-width: 100%;
+      animation: aa ;
+    }
+    nav ul li a{
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      position: relative;
+      font-size: 20px;
+   display: none;
+    }
+   
+    .tombol,.sidebar{
+      display: none;
+    }
+    .asap1,.asap2,.asap3,.asap{
+      max-height: 10vh;
+      max-width: 100%;
+    }
+  .wadahternak{
+    height: 110vh;
+  }
+    .judul.munculJudul img{
+      top: 15vh;
+      position: relative;
+      height:70vh;
+    }
+    .konten3,.konten4,.konten5,.konten6,.konten7,.konten8{
+      height: auto;
+       
+         }
+     .perang{
+       margin-top: 20px;
+     }
+     .page2{
+     height: 100px;
+     }
+     .banner{
+       height:170vh;
+     }
+     .story-2{
+       bottom: 100px;
+      
+     }
+     .page2 .story p{
+       font-size: 10px;
+       width: 210px;
+     }
+     .page2 .pic2 img{
+       height: 300px;
+       right: 20px;
+     }
+         .wadahternak{
+           height: 250px;
+           overflow-x: hidden;
+         }
+         .cerita{
+           height: 20vh;
+         }
+     
+         .konten2{
+     height: 200px;
+         }
+         .sosmed ul li{left: 0;
+        padding-left: 5px;}
+         .follow{
+          right: 0;
+          left: 2px;
+         }
+     #peternak2{
+       height: 40vh;
+     }
+     .konten2 .b{
+       height: 100px;
+       right: 5%;
+     }
+     .konten3{
+       height: 200px;
+     }
+     
+     .konten3 .text{
+       height: 50px;
+     }
+     
+     .konten4{
+       height: 200px;
+     }
+     .salam{
+       height: 200px;
+     }
+     .konten4 .a .teks{
+       right: 10px;
+       left: 20px;
+     }
+     
+     .konten5{
+     }
+     
+     .konten5 .teks{
+     
+       right: 3px;
+     top: 100px;
+     }
+     .konten6{
+     }
+     .konten7{
+       height: 200px;
+     }
+     .konten7 .teks p{
+       left: 20px;
+     }
+     
+     .konten8{
+       height: 250px;
+       opacity: 1;
+     }
+     .konten8 .teks{
+       height: 50px;
+     }
+     
+     .konten9{
+       height: 200px;
+     }
+     
+     .konten10{
+       opacity: 1;
+       height: 300px;
+     }
+     
+     
+     .adu{
+       height: 700px;
+     }
+     
+     .adu .teks{
+       height: 100px;
+     }
+     .gelud{
+     opacity: 1;
+       height: 400px;
+     }
+     
+     .konten11{
+       height: 230px;
+     }
+     .konten11 .ucul img{
+       height: 200px;
+     }
+     .konten12{
+       height: 200px;
+     }
+     .konten12 .teks{
+     left: 10px;
+     }
+     .konten12 .cow img{
+       top: 10px;
+       height: 200px;
+       }
+     
+       .konten13{
+         background-color: rgb(0, 0, 0);
+         height: 400px;
+         width: 100%;
+       }
+       .konten13 .a img{
+     
+         object-fit: cover;
+         width: 100%;
+         height: 300px;
+       }
+     
+       .konten13 .teks{
+         padding-bottom: 300px;
+       }
+     .konten14{
+       height: 300px;
+     }
+     .konten14 .atas{
+       height: 150px;
+     }
+       .yt{
+      
+         height:200px;
+       }
+     
+       .yt iframe{
+         height: 190px;
+         width: 200px;
+       }
+     
+       .konten15{
+         height: 500px;
+       }
+     
+       .img-slide{
+         height: 100px;
+       
+       }
+     .img-slide .slide img{
+       height: 300px;
+     
+     }
+     
+     
+     
+      
+    }

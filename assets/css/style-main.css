@@ -1229,7 +1229,7 @@ right: 8%;
 .bakar2{
 
   transform: scale(0.5) translateY(20px);
-  opacity: 0;
+  opacity: 1;
   transition: 3s;
 }
 .bakar2.muncul{

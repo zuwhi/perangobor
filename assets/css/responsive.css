@@ -1,3 +1,202 @@
+.konten16{
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+ 
+}
+@import url('https://fonts.googleapis.com/css?family=Just+Another+Hand');
+
+
+
+#i1, #i2, #i3, #i4, #i5{ display: none;}
+
+.container{
+		margin: 0 auto;
+		margin-top: 20px;
+		position: relative;
+		width: 60%;
+		height: 400px;
+		padding-bottom: 38%;
+	  user-select: none;
+		background-color: #000000;
+		border-radius:10px ; 
+	}
+
+	.container .slide_img{
+		position: absolute;
+		width: 100%;;
+		height: 100%;
+    
+	}
+	.container .slide_img img{
+		width: inherit;
+		height: inherit;
+    border-radius:10px ; 
+    opacity: 0.5;
+
+	}
+  .slide_img h1{
+    position: absolute;
+    top: 3%;
+    left: 4%;
+    color: rgb(255, 255, 255);
+    font-size: 4vw;
+    z-index: 5;
+
+  }
+
+  .slide_img p{
+    position: absolute;
+    width: 60%;
+    top: 16%;
+    left: 4%;
+    color: rgba(253, 253, 253, 0.958);
+    font-size: 1.7vw;
+    z-index: 5;
+  }
+	 .prev, .next{
+    transition: .45s;
+		cursor: pointer;
+		text-align: center;
+		width: 12%;
+		height: inherit;
+		position: absolute;
+		top:0; 
+		color:rgba(244, 244, 244,.9);
+		z-index: 99;
+		
+	}
+
+	.next{right:-98px;}
+	.prev{left:-150px;}
+
+	label span{
+		position: absolute;
+		font-size: 100pt;
+		top: 50%;
+	 	transform: translateY(-50%);
+	}
+
+	.prev:hover, .next:hover{
+		transition: .3s;
+		color: #8b2b2b; 
+	}
+
+.container #nav_slide{
+	width: 100%;
+	bottom: 12%;
+	height: 11px;
+	position: absolute;
+	text-align: center;
+	z-index: 99;
+	cursor: default;
+}
+
+#nav_slide .dots{
+	top: -5px;
+	width: 18px;
+	height: 18px;
+	margin: 0 4px;
+	position: relative;
+	border-radius: 100%;
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0.6);
+	transition: .4s;
+}
+
+#nav_slide .dots:hover {
+	cursor: pointer;
+	background-color: rgba(255, 255, 255, 0.9);
+	transition: .25s
+}
+
+.slide_img{z-index: -1;}
+
+	#i1:checked ~ #one  ,
+	#i2:checked ~ #two  ,
+	#i3:checked ~ #three,
+	#i4:checked ~ #four ,
+	#i5:checked ~ #five 
+	{z-index: 9; animation: scroll 3s ease-in-out; transition-property: clip-path;}
+
+	#i1:checked  ~  #nav_slide #dot1,
+	#i2:checked  ~  #nav_slide #dot2,
+	#i3:checked  ~  #nav_slide #dot3,
+	#i4:checked  ~  #nav_slide #dot4,
+	#i5:checked  ~  #nav_slide #dot5
+	{ background-color: rgba(255,255,255,.9);}
+
+@keyframes scroll{
+	0%{	opacity:0;
+    clip-path: circle(0 at 0 50%);}
+	100%{opacity:1;clip-path: circle(150% at 0% 50%);}
+}		
+.konten16 .teks{
+  position: relative;
+  z-index: 10;
+  left:  34%;
+  width: 50%;
+  bottom: 12%;
+  
+}
+
+.konten16 .teks h1{
+  text-align: end;
+font-size: 4vw;
+color: white;
+}
+
+/* .yt{
+	margin: 0 auto;
+	margin-top: 50px;
+	position: relative;
+	width: 150px;
+	height:50px;
+	border: outset #2c2c2c 4px;
+	border-radius: 10px;
+	text-align: center;
+	font-size: 30pt;
+	transition: .5s;
+}
+
+.yt a{
+	text-decoration: none;
+	color: #4c4c4c;
+	transition: .5s;
+}
+
+.yt:hover{
+	background: #4c4c4c;
+	transition: .3s;
+}
+
+.yt:hover a{
+	color: #fff;
+	transition: .3s;
+}
+ */
+@media screen and (max-width: 685px){
+	.container{
+		border: none;
+		width: 100%;
+		height: 0;
+		padding-bottom: 55%; 
+	}	
+	
+	label span { font-size: 50pt; }
+	
+	.prev, .next{
+		width: 15%;
+	}	
+	#nav_slide .dots{
+		width: 12px;
+		height: 12px;
+	}
+}
+@media screen  and(min-width: 970px){
+	.me{ display: none;}
+}
+
 
 
 
@@ -288,7 +487,8 @@ left: 10px;
   margin: 0;
   padding: 0;
 }
-
+.next{right:0;}
+.prev{left:0}
 .follow{
   display: none;
 }
@@ -541,7 +741,9 @@ left: 10px;
    .kaki h2{
     font-size: 15px;
    }
-     
+   .next{right:0;}
+   .prev{left:0;}
+ 
      
       
     }

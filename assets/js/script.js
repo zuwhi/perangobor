@@ -173,7 +173,6 @@ window.onscroll = function(){
     // #8a2e26
     $('.panah-scroll ').removeClass('muncul');
 
-    $('.konten2 #peternak2').removeClass('muncul');
     }
    
    
@@ -278,6 +277,8 @@ window.onscroll = function(){
         $('.intro').addClass('muncul');
         $('.konten1').removeClass('muncul');
         $('.konten1 .ternak').removeClass('muncul');
+
+
     }
 
 
@@ -299,7 +300,8 @@ window.onscroll = function(){
     if (value > $('.konten2').offset().top-200){
         $('.konten1').removeClass('muncul');
 //into intro
-
+    } else if(value < $('.konten2').offset().top-200){
+        $('.konten2 #peternak2').removeClass('muncul');
 
     }
     if (value > $('.konten2').offset().top-400){

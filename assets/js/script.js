@@ -132,6 +132,7 @@ window.onscroll = function(){
 
 // $('.pakhaji').css({'transform': 'scale('+zoom+')'})
 // $('.peternak').css({'transform': 'scale('+zoom+')'})
+
    if (value < 10){
 
 
@@ -175,7 +176,9 @@ window.onscroll = function(){
 
     }
    
-   
+
+
+
     if (value > 598){
         $('.banner > img ').css({'position' : 'absolute','bottom' : '0px'})
         

@@ -299,10 +299,17 @@ overflow: hidden;
 }
 .page2{
 height: 100px;
+
+}
+.page2 .story .a,.page2 .story .b{
+  transform: translateX(0px) ;
+  top: 0px;
+  opacity: 1;
 }
 .banner{
   height:170vh;
 }
+
 .story-2{
   bottom: 100px;
  
@@ -311,9 +318,16 @@ height: 100px;
   font-size: 10px;
   width: 210px;
 }
+.page2 .story .a{position: relative;
+  left: 11%;
+}
+.page2 .pic2{
+  position: relative;
+  left: 10px;
+}
 .page2 .pic2 img{
   height: 300px;
-  right: 20px;
+
 }
     .wadahternak{
       height: 250px;
@@ -346,6 +360,7 @@ height: 200px;
 }
 .salam{
   height: 200px;
+  opacity: 1;
 }
 .konten4 .a .teks{
   right: 10px;
@@ -354,16 +369,30 @@ height: 200px;
 
 .konten5{
 }
-
+.konten5 .mancing{opacity: 1;}
+.konten5 .mancing.muncul{opacity: 1;}
 .konten5 .teks{
 
   right: 3px;
 top: 100px;
 }
+.konten6.hilang{
+ opacity:1;
+ transition: 1s;
+}
+.iwak{
+ opacity: 1;
+}
 .konten6{
+ height: 250px;
 }
 .konten7{
   height: 200px;
+ 
+}
+.konten7 .bakar{opacity: 1;}
+.bakar2{
+ opacity: 1;
 }
 .konten7 .teks p{
   left: 20px;
@@ -379,13 +408,17 @@ top: 100px;
 
 .konten9{
   height: 200px;
+  opacity: 1;
 }
 
 .konten10{
   opacity: 1;
   height: 300px;
 }
+#sapu{
+ opacity: 1;
 
+}
 
 .adu{
   height: 700px;
@@ -403,7 +436,7 @@ opacity: 1;
   height: 230px;
 }
 .konten11 .ucul img{
-  height: 200px;
+  height: 130px;
 }
 .konten12{
   height: 200px;
@@ -414,8 +447,15 @@ left: 10px;
 .konten12 .cow img{
   top: 10px;
   height: 200px;
+  opacity: 1;
   }
-
+  .konten12 .cow {
+   opacity: 1;
+   transform: translateY(0)
+  }
+  .konten12 .teks{
+   opacity: 1;
+  }
   .konten13{
     background-color: rgb(0, 0, 0);
     height: 400px;
@@ -434,6 +474,7 @@ left: 10px;
 .konten14{
   height: 300px;
 }
+
 .konten14 .atas{
   height: 150px;
 }
@@ -453,13 +494,26 @@ left: 10px;
 
   .img-slide{
     height: 100px;
+    width: 400px;
   
   }
 .img-slide .slide img{
-  height: 300px;
+  
 
 }
+.konten15 .teks{
 
+ left: 130px;
+ top: 150px;
+}
+.kaki{
+ height: 50px;
+}
+.kaki h2{
+font-size: 15px;
+}
+.next{right:0;}
+.prev{left:0;}
 
 
 
@@ -507,7 +561,7 @@ left: 10px;
       color: rgb(255, 255, 255);
       position: relative;
       font-size: 20px;
-   display: none;
+   
     }
    
     .tombol,.sidebar{

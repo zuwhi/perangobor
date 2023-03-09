@@ -22,9 +22,10 @@ var bs = new Audio('assets/sound/bs.mp3');
 //       },autoScrollDelay)
 //     }
 // }
+$('.banner').css({ 'animation': 'fade 2s'})
+$('.pakhaji, .peternak').css({ 'animation': 'skala 3S'})
 
-
-bs.play().loop;
+bs.play().loop = true;
 audio.play();
 var count= 0;
 

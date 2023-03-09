@@ -178,7 +178,6 @@ nav ul li a:hover::after{
     position: relative;
     transition: 2s ease;
 background-size: cover;
-animation: fade 2s;
 overflow: hidden;
 width: 100%;
   
@@ -274,7 +273,7 @@ width: 100%;
 }
 .title .budaya{
   cursor: default;
-  height: 40vh;
+  height: 37vh;
   width: 100%;
   align-items: end;
   justify-content: center;
@@ -282,9 +281,12 @@ width: 100%;
 }
 .title h2{
   opacity: 0;
-color: rgb(255, 255, 255);
+color: rgba(255, 255, 255, 0.924);
 font-size: 2vw;
-font-family: 'berkeley';
+font-family: 'poe';
+letter-spacing: -2px;
+font-weight: normal;
+
 }
 
 
@@ -305,7 +307,7 @@ font-family: 'berkeley';
 
 }
 .title .perang h1{
-  margin-top: -3vh;
+  margin-top: -3.2vh;
   color: white;
   font-weight: normal;
   font-size: 12vw;
@@ -423,7 +425,7 @@ font-family: 'berkeley';
 .pakhaji {
   transition: 2s ;
   position: relative;
-animation: skala 3S;
+
 }
 @keyframes skala {
   0%{
@@ -434,7 +436,6 @@ animation: skala 3S;
   
   }}
 .peternak {
-  animation: skala 3S;
   transition: 2s;
   
 }
@@ -1896,6 +1897,18 @@ ul li p{
   @font-face {
     font-family: 'edo';
     src: url(../font/edosz.ttf);
+  }
+  @font-face {
+    font-family: 'tomi';
+    src: url(../font/tomi.otf);
+  }
+  @font-face {
+    font-family: 'poe';
+    src: url(../font/poe.ttf);
+  }
+  @font-face {
+    font-family: 'nexa';
+    src: url(../font/nexa.ttf);
   }
   @font-face {
     font-family: 'berkeley';

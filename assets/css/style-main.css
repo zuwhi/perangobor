@@ -98,7 +98,7 @@ nav ul li a:hover::after{
   align-items: center;
   justify-content: center;
   cursor: grab;
-  z-index: 999;
+  z-index: 91;
 
 }
 

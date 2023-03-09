@@ -32,6 +32,7 @@ nav{
 
 .dd.show{
   display: unset;
+  z-index: 999;
 }}
 .konten16{
   height: 100vh;

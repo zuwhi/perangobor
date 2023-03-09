@@ -1,5 +1,6 @@
 .icon{
   display: none;
+  z-index: 999;
 }
 .dd{
   position: absolute;
@@ -17,6 +18,10 @@
   justify-content: center;
   color: white;
   text-decoration: none;
+ 
+}
+.dd a:hover{
+  background-color: #642828;
 }
 @media screen and (max-width: 600px) {
 nav ul :not(:last-child){
@@ -34,6 +39,9 @@ nav{
   display: unset;
   z-index: 999;
 }}
+.sidenav{
+  top: 100px;
+}
 .konten16{
   height: 100vh;
   width: 100%;
@@ -142,7 +150,7 @@ nav{
 
 #nav_slide .dots:hover {
 	cursor: pointer;
-	background-color: rgba(255, 255, 255, 0.9);
+	background-color: #8b2b2b;
 	transition: .25s
 }
 
@@ -160,7 +168,7 @@ nav{
 	#i3:checked  ~  #nav_slide #dot3,
 	#i4:checked  ~  #nav_slide #dot4,
 	#i5:checked  ~  #nav_slide #dot5
-	{ background-color: rgba(255,255,255,.9);}
+	{ background-color: #8b2b2b;}
 
 @keyframes scroll{
 	0%{	opacity:0;
@@ -255,6 +263,7 @@ color: white;
 body{
 
 }
+
   .tombol,.sidebar{
     display: none;
   }

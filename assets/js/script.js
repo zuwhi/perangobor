@@ -29,6 +29,11 @@ bs.play().loop = true;
 audio.play();
 var count= 0;
 
+bs.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
+
 $('.icon').click(
     function swipe(){
         if(count== 0){

@@ -430,6 +430,8 @@ console.log('bakar :'+bakar/15)
     }else if (value > $('.konten10').offset().top-200){
         $('.konten10').addClass('muncul');
         $('#sapu').addClass('muncul');
+        $('#kaget1').removeClass('muncul');
+        $('.konten9').removeClass('muncul');
         
         
     }else if (value > $('.konten10').offset().top-200){

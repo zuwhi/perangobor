@@ -1,3 +1,38 @@
+.icon{
+  display: none;
+}
+.dd{
+  position: absolute;
+  top:70px;
+  right: 20px;
+  z-index: 999;
+  width: 80px;
+  background-color: #8b2b2b;
+  height:auto;
+  
+}
+.dd a{
+  display: flex;
+  padding: 10px 0px;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+}
+@media screen and (max-width: 600px) {
+nav ul :not(:last-child){
+  display: none;
+}
+nav{
+  justify-content: end;
+}
+.icon{
+  position: relative;
+  display: flex;
+}
+
+.dd.show{
+  display: unset;
+}}
 .konten16{
   height: 100vh;
   width: 100%;
@@ -213,9 +248,10 @@ color: white;
 /* TTTTTTTTTTTTTTTTTTTTTTTTTABLETTTTTTTTTTTTTTTTT */
 
 @media screen and (max-width: 768px) {
-
+  .follow{
+    display: none;
+  }
 body{
-  overflow-x: hidden;
 
 }
   .tombol,.sidebar{
@@ -224,6 +260,7 @@ body{
 .konten1{
   opacity: 1;
 }
+
   .asap1,.asap2,.asap3,.asap{
     object-fit: cover;
     max-height: 50vh;
@@ -238,7 +275,7 @@ body{
   
   
   }
-  .nav{
+ .sidenav{
     height: 50px;
     width: 40px;
     padding-top: 100px;
@@ -255,7 +292,7 @@ body{
       border-radius: 50%;
       box-shadow: 0 0 20px rgba(0,0,0,0.2);
   }
-  .nav.open .nav-content span
+  .sidenav.open .nav-content span
   {
     transform: rotate(calc(var(--i) * (54deg))) translateY(55px);
     opacity: 1;
@@ -586,7 +623,7 @@ font-size: 15px;
 
   overflow-x: hidden;
 }
-.nav{
+.sidenav{
   height: 50px;
   width: 40px;
   padding-top: 100px;
@@ -670,7 +707,7 @@ font-size: 15px;
      }
          .wadahternak{
            height: 250px;
-           overflow-x: hidden;
+         
          }
          .cerita{
            height: 20vh;

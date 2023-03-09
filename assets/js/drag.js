@@ -5,7 +5,7 @@
 
 
 
-const nav = document.querySelector(".nav"),
+const nav = document.querySelector(".sidenav"),
       toggleBtn = nav.querySelector(".toggle-btn");
 
   toggleBtn.addEventListener("click" , () =>{

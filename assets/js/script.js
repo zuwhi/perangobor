@@ -29,6 +29,19 @@ bs.play().loop = true;
 audio.play();
 var count= 0;
 
+$('.icon').click(
+    function swipe(){
+        if(count== 0){
+            count=1
+            $(".dd").addClass('show');
+            $(".dd.show").css({'display' : 'unset'})
+        }else {
+            count = 0;
+            $(".dd.show").css({'display' : 'none'})
+            $(".dd").removeClass('show');
+            }
+    }
+)
 
 
 $('#sound').click(
@@ -140,7 +153,8 @@ window.onscroll = function(){
 
    if (value < 10){
 
-
+    $(".dd.show").css({'display' : 'none'})
+    $(".dd").removeClass('show');
     $('.panah-scroll ').addClass('muncul');
     $('.story .a').removeClass('muncul');
     $('.story .b').removeClass('muncul');

@@ -5,7 +5,8 @@ window.onload = function(){
 
 
 // ==================HALAMAN MAIN PAGE=================
-var audio = new Audio('assets/sound/cut.mp3');
+var audio = new Audio('assets/sound/Api.mp3');
+var bs = new Audio('assets/sound/bs.mp3');
 
 // var autoScrollDelay = 1
 // var autoScrollSpeed = 2
@@ -23,6 +24,7 @@ var audio = new Audio('assets/sound/cut.mp3');
 // }
 
 
+bs.play().loop;
 audio.play();
 var count= 0;
 
@@ -34,11 +36,13 @@ $('#sound').click(
             count=1
             $('#sound').css({'opacity' : '0'})
             audio.pause();
+            bs.pause()
         }
             else{
                 $('#sound').css({'opacity' : '1'})
                 count = 0;
                 audio.play();
+                bs.play().loop;
             }
    
 }
@@ -473,47 +477,6 @@ console.log('bakar :'+bakar/15)
 // $(".toggle").click(function cek(){
 //     $(".conten").classList.toggle("open")
 // })
-
-
-
-
-
-
-    // pakhaji.style = 'height : '+ value +'px,width :'+ value +'px';
-    // pakhaji.style.left= nilai *  -0.5 + 'px';
-    // peternak.style.left= nilai *  0.5 + 'px';
-
-    // judul1.style.marginBottom = nilai *  -1.5 + 'px';
-
-   
-    // console.log(value);
-    // if (value > $('.banner').offset().top-500){
-    //     $('.banner > img ').css({'position' : 'absolute'})
-        
-    // }
-    // if (value > $('.konten1').offset().top-200){
-    //     console.log("ok");
-    //     $('.konten1 .paraf1').addClass('muncul');
-    //     // cek = document.querySelector('.konten1');
-    //     // cek.innerHTML = '<h1> halooo </h1>';
-    // }
-    // else {
-    //     $('.konten1 .paraf1').removeClass('muncul');
-
-    // }
-    
-
-
-// if(value > 1100){
-    //     $('.text ').css({'position' : 'static'})
-
-    // }
-    // if(value > 2500){
-    //     $('.text ').css({'position' : 'fixed',})
-    // }
-
-
-
 
 
 

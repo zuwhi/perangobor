@@ -159,15 +159,17 @@ nav ul li a:hover::after{
 .nav-content span a i
 {
   
-  color: #8e0005;
+  
   transform: rotate(calc(var(--i) * (360deg/ -8)));
   opacity: 0.8;
   transition: 0.2s;
 }
 
 .nav-content span a:hover
-{
+{  color: #5e5e5e;
+
   opacity: 1;
+ 
 }
 
 .banner{
@@ -690,10 +692,12 @@ z-index: 991;
   color: white;
   flex: 6;
   left: 3%;
+  padding-bottom: 40px;
 
 }
 .story .a.muncul{
   top: 0;
+  
   opacity: 1;
   transition: 4s;
 }
@@ -706,7 +710,7 @@ z-index: 991;
   margin: -2vw 0;
 }
 .page2 .story p{
-  font-size: 1.4vw;
+  font-size: 1.7vw;
   text-align: justify;
 }
 .page2 .story .b{

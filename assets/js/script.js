@@ -25,11 +25,16 @@ var bs = new Audio('assets/sound/bs.mp3');
 $('.banner').css({ 'animation': 'fade 2s'})
 $('.pakhaji, .peternak').css({ 'animation': 'skala 3S'})
 
-bs.play().loop = true;
+bs.play();
+bs.volume = 1;
 audio.play();
 var count= 0;
 
 bs.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
+audio.addEventListener('ended', function() {
     this.currentTime = 0;
     this.play();
 }, false);
@@ -61,7 +66,7 @@ $('#sound').click(
                 $('#sound').css({'opacity' : '1'})
                 count = 0;
                 audio.play();
-                bs.play().loop;
+                bs.play();
             }
    
 }
@@ -157,7 +162,9 @@ window.onscroll = function(){
 // $('.peternak').css({'transform': 'scale('+zoom+')'})
 
    if (value < 10){
+    bs.volume = 1;
 
+  
     $(".dd.show").css({'display' : 'none'})
     $(".dd").removeClass('show');
     $('.panah-scroll ').addClass('muncul');
@@ -171,6 +178,9 @@ window.onscroll = function(){
     }
 
    if (value < 100){
+    bs.play();
+  
+
     $('.bg-1').css({
         'background-color' : 'black',
         'transition': '2s'
@@ -185,6 +195,7 @@ window.onscroll = function(){
    
 }
     if (value > 300){
+        bs.volume = 0.8;
         $('.bg-1').css({
         'background-color' : 'rgb(49, 8, 8)'
     })
@@ -205,7 +216,7 @@ window.onscroll = function(){
 
     if (value > 598){
         $('.banner > img ').css({'position' : 'absolute','bottom' : '0px'})
-        
+        bs.volume = 0.6;
         //page2
         $('.story .a').addClass('muncul');
         $('.story .b').addClass('muncul');
@@ -220,12 +231,15 @@ window.onscroll = function(){
     }
 
     if(value > 1400){
+        bs.volume = 0.3;
+        audio.volume = 0.3;
         $('.page2 .story-2').addClass('muncul');
        
      
         
     }
     if(value >  $('#perang1').offset().top-800){
+        bs.volume= 0.1;
         $('.aa').addClass('muncul');
         // $('.intro .text h2').css({'animation': 'fade 3s','opacity': '1'})
     }else if(value < $('#perang1').offset().top-700){
@@ -234,9 +248,18 @@ window.onscroll = function(){
     }
   
     if (value > $('.konten').offset().top){
+        $(audio).animate({volume: 0.1});
+
+    }
+    
+
+    if (value > $('.konten').offset().top){
+        bs.volume= 0.05;
+       
         $('.intro').css({'position': 'fixed'})
     }
     else if(value < $('.konten').offset().top){
+    
         $('.intro').css({'position': 'relative'})
     }
 
@@ -281,8 +304,10 @@ window.onscroll = function(){
 
 
 
-
+    
     if (value > $('.konten1').offset().top-100){
+        bs.volume = 0;
+
         $('.konten1').addClass('muncul');
         $('.konten1 .ternak').each(function(i)
         {
@@ -294,13 +319,13 @@ window.onscroll = function(){
         $('.intro').css({'position': 'relative'})
         
     }else if(value > $('.konten1').offset().top-250){
-        
+    
         $('.intro').removeClass('muncul');
 
     }
     
     else if(value < $('.konten1').offset().top-400){
-       
+      
         $('.intro').addClass('muncul');
         $('.konten1').removeClass('muncul');
         $('.konten1 .ternak').removeClass('muncul');
@@ -474,17 +499,24 @@ console.log('bakar :'+bakar/15)
     }else if (value > $('.konten12').offset().top-500){
         $('.konten12 .teks').addClass('muncul');
         $('.cow').addClass('muncul');
-      
+        bs.volume= 0;
     }
 
     if (value < $('.konten13').offset().top-200){
+        
         $('#konten13').removeClass('muncul');
 
     }else if (value > $('.konten13').offset().top-200){
+        bs.volume= 0.1;
         $('#konten13').addClass('muncul');
         $('.cow').removeClass('muncul');
     }
-
+    if (value > $('.konten14').offset().top-200){
+        bs.volume= 0.5;
+    }
+    if (value > $('.konten16').offset().top-200){
+        bs.volume= 0.8;
+    }
 
 
 

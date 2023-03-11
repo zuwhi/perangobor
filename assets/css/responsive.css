@@ -90,11 +90,14 @@ nav{
   }
 
   .slide_img p{
+    border-radius: 6px;
+    padding: 10px 10px;
+    background-color: rgba(74, 74, 74, 0.329);
     position: absolute;
     width: 60%;
     top: 16%;
-    left: 4%;
-    color: rgba(253, 253, 253, 0.958);
+    left: 3%;
+    color: rgba(222, 220, 220, 0.958);
     font-size: 1.7vw;
     z-index: 5;
   }
@@ -106,7 +109,7 @@ nav{
 		height: inherit;
 		position: absolute;
 		top:0; 
-		color:rgba(244, 244, 244,.9);
+		color:rgba(244, 244, 244, 0.396);
 		z-index: 99;
 		
 	}
@@ -187,7 +190,11 @@ nav{
 .konten16 .teks h1{
   text-align: end;
 font-size: 4vw;
-color: white;
+color: #8b2b2b;
+text-shadow: 0px 0px 10px hsl(0, 0%, 0%),
+1px 1px 0 #000000,
+1px -1px 0 #000000,
+-1px -1px 0 #000000;
 }
 
 /* .yt{
@@ -423,6 +430,7 @@ height: 200px;
 }
 .konten3{
   height: 200px;
+  opacity: 1;
 }
 
 .konten3 .text{
@@ -487,13 +495,26 @@ top: 100px;
 
 .konten10{
   opacity: 1;
-  height: 300px;
+  height: 100px;
+  width: 200px;
+
+}
+.sapu{
+  width: 100px;
 }
 #sapu{
  opacity: 1;
 
 }
+.konten10 .teks{
+  top: 10px;
+  left: 110px;
+  bottom: 20px;
 
+}
+.konten10 .teks p{
+  width: 100px;
+}
 .adu{
   height: 700px;
 }
@@ -748,7 +769,9 @@ font-size: 15px;
      .konten3 .text{
        height: 50px;
      }
-     
+     .salim{
+      opacity: 1;
+     }
      .konten4{
        height: 200px;
      }
@@ -895,11 +918,27 @@ font-size: 15px;
        
      
      }
+     .videoo iframe{
+      top: 80px;
+      position: relative;
+      left: 9%;
+      width: 40%;
+      height: 100px;
+      opacity: 0.4;
+    }
      .konten15 .teks{
 
       left: 130px;
       top: 150px;
      }
+     .videoo{
+      height: 100px;
+     }
+     .konten16{
+      height: 300px;
+     }
+     .next{right:0;}
+     .prev{left:0;}
      .kaki{
       height: 50px;
      }

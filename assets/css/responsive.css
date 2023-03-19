@@ -126,7 +126,7 @@ nav{
 
 	.prev:hover, .next:hover{
 		transition: .3s;
-		color: #8b2b2b; 
+		color: #8b2b2ba8; 
 	}
 
 .container #nav_slide{
@@ -153,7 +153,7 @@ nav{
 
 #nav_slide .dots:hover {
 	cursor: pointer;
-	background-color: #8b2b2b;
+	background-color: #8b2b2b96;
 	transition: .25s
 }
 
@@ -164,14 +164,14 @@ nav{
 	#i3:checked ~ #three,
 	#i4:checked ~ #four ,
 	#i5:checked ~ #five 
-	{z-index: 9; animation: scroll 3s ease-in-out; transition-property: clip-path;}
+	{z-index: 9; animation: scroll 2s ease-in-out; transition-property: clip-path;}
 
 	#i1:checked  ~  #nav_slide #dot1,
 	#i2:checked  ~  #nav_slide #dot2,
 	#i3:checked  ~  #nav_slide #dot3,
 	#i4:checked  ~  #nav_slide #dot4,
 	#i5:checked  ~  #nav_slide #dot5
-	{ background-color: #8b2b2b;}
+	{ background-color: #8b2b2b7d;}
 
 @keyframes scroll{
 	0%{	opacity:0;
@@ -190,7 +190,7 @@ nav{
 .konten16 .teks h1{
   text-align: end;
 font-size: 4vw;
-color: #8b2b2b;
+color: #bc3a3a;
 text-shadow: 0px 0px 10px hsl(0, 0%, 0%),
 1px 1px 0 #000000,
 1px -1px 0 #000000,
@@ -267,10 +267,21 @@ text-shadow: 0px 0px 10px hsl(0, 0%, 0%),
   .follow{
     display: none;
   }
+  .page2 .story .a{
+    padding-right: 20px;
+  }
 body{
 
 }
+.konten5 .mancing.muncul{
+  opacity: 1;
+  transition: 1s;
+  transform: scale(1) translateX(0vw);
+}
+#ternak5{
+  padding-right: 150px;
 
+}
   .tombol,.sidebar{
     display: none;
   }
@@ -323,7 +334,12 @@ body{
     max-height: 10vh;
     max-width: 100%;
   }
-
+  .title h2{
+   
+  letter-spacing: 0px;
+  font-weight: normal;
+  
+  }
   .judul.munculJudul img{
     top: 15vh;
     position: relative;
@@ -334,6 +350,7 @@ body{
     overflow: hidden;
    
 }
+
 .trans1{
     bottom:  45px;
 }
@@ -418,7 +435,7 @@ height: 100px;
     }
 
     .konten2{
-height: 200px;
+height: 250px;
     }
 
 #peternak2{
@@ -429,7 +446,7 @@ height: 200px;
   right: 5%;
 }
 .konten3{
-  height: 200px;
+  height: 250px;
   opacity: 1;
 }
 
@@ -439,6 +456,7 @@ height: 200px;
 
 .konten4{
   height: 200px;
+
 }
 .salam{
   height: 200px;
@@ -466,10 +484,13 @@ top: 100px;
  opacity: 1;
 }
 .konten6{
- height: 250px;
+ height: 300px;
+
 }
 .konten7{
-  height: 200px;
+ 
+  height: 250px;
+ 
  
 }
 .konten7 .bakar{opacity: 1;}
@@ -495,26 +516,13 @@ top: 100px;
 
 .konten10{
   opacity: 1;
-  height: 100px;
-  width: 200px;
-
-}
-.sapu{
-  width: 100px;
+  height: 300px;
 }
 #sapu{
  opacity: 1;
 
 }
-.konten10 .teks{
-  top: 10px;
-  left: 110px;
-  bottom: 20px;
 
-}
-.konten10 .teks p{
-  width: 100px;
-}
 .adu{
   height: 700px;
 }
@@ -596,11 +604,27 @@ left: 10px;
   
 
 }
+.videoo iframe{
+ top: 80px;
+ position: relative;
+ left: 9%;
+ width: 40%;
+ height: 100px;
+ opacity: 0.4;
+}
 .konten15 .teks{
 
  left: 130px;
  top: 150px;
 }
+.videoo{
+ height: 100px;
+}
+.konten16{
+ height: 300px;
+}
+.next{right:0;}
+.prev{left:0;}
 .kaki{
  height: 50px;
 }
@@ -609,9 +633,6 @@ font-size: 15px;
 }
 .next{right:0;}
 .prev{left:0;}
-
-
-
 
 
 
@@ -774,6 +795,7 @@ font-size: 15px;
      }
      .konten4{
        height: 200px;
+      
      }
      .salam{
        height: 200px;
@@ -785,6 +807,7 @@ font-size: 15px;
      }
      
      .konten5{
+  
      }
      .konten5 .mancing{opacity: 1;}
      .konten5 .mancing.muncul{opacity: 1;}

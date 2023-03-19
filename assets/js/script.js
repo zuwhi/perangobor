@@ -1,4 +1,3 @@
-
 window.onload = function(){
     $('#load').css({'display' : 'none'});
     
@@ -153,7 +152,7 @@ window.onscroll = function(){
   $('#perang').css({'position' : 'relative','transform': 'translateY('+transY/10+'px)'})
   $('.api1').css({'transform': 'translateY('+value/8+'px)'})
   $('.api2').css({'transform': 'translateY('+value/10+'px) '})
-  $('.api3').css({'transform': 'translateY(-'+value/16+'px)  translateX(-'+value/23+'px)'})
+  $('.api3').css({'transform': 'translateY(-'+value/30+'px)  translateX(-'+value/23+'px)'})
   $('.api4').css({'transform': 'translateY('+value/10+'px) translateX(-'+value/25+'px)'})
   $('.api6').css({'transform': 'translateY('+value/6+'px)'})
 

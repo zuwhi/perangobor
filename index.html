@@ -6,10 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>start to open</title>
     
-    
+    <script src="assets/js/jquery.js"></script>
+    <script>
+   
+        var sound = new Audio('assets/sound/Api.mp3');
+        sound.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
+    sound.play();
+
+     </script>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+   
     <div class="latarBelakang">
         <img src="assets/img/opening.jpg" alt=""  class="openingBg">
         <div class="judul"  >
@@ -340,10 +351,7 @@
            
         </div>
     </div>
- <script>
-    var audio = new Audio('assets/sound/Api.mp3');
-audio.play();
- </script>
+
 </body>
 <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 
